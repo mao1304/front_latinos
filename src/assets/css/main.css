@@ -5337,7 +5337,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 
 .widget__post-item .post-meta a i {
   margin-right: 10px;
-  color: #fff;
+  /* color: #fff;*/
+  color: var(--color-primary);
 }
 
 .widget__post-item .post-content {
@@ -8819,7 +8820,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 
 .post-meta li i {
   margin-right: 5px;
-  color: #fff;
+  /* color: #fff; */
+  color: var(--color-primary)
 }
 
 .post-meta li a {
@@ -10004,7 +10006,7 @@ blockquote .quote {
 
 .breadcrumb__list li+.breadcrumb-item::before {
   content: "|";
-  color: #fff;
+  color: var(--color-primary);
 }
 
 @media (max-width: 767px) {

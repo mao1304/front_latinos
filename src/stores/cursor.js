@@ -8,9 +8,9 @@ export default function useCanvasCursor(canvasRef) {
 
     const E = {
         debug: true,
-        friction: 0.5,
+        friction: 0.47,
         trails: 20,
-        size: 20,
+        size: 50,
         dampening: 0.25,
         tension: 0.98,
     };

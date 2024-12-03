@@ -17,12 +17,15 @@ import SideSocial from './sideSocial.vue';
     <div class="overlay"></div>
     <div class="content">
       <div class="footer-gradient">
-        <div class=" containerP ">       
-          <p>No esperes mas para hacer el cambio</p>
-          <h1>a tu vida</h1>
+        <div class=" containerP "> 
+          <span class="line">
+            <p>No esperes mas para hacer el cambio</p>
+            <h1>a tu vida</h1>
+            <button class="button-banner">Entérate como</button>
+          </span>      
           <div class="counter"><Timer target-date="2024-12-16T05:25:00" /></div>
         </div>
-        <div class="containerP " style="border-left: solid 2px #fff; display: flex ; flex-direction: column; align-items: center; ">
+        <!-- <div class="containerP " style="border-left: solid 2px #fff; display: flex ; flex-direction: column; align-items: center; ">
           <h3 class="location"><MapPin class="icon"/>Frankfort KY</h3>
           <div class="location-image">
             <img src="https://lh5.googleusercontent.com/p/AF1QipMZdeDkyKlNH-SrNOl3U8GglxjYZsqmmRBsH2R9=w540-h312-n-k-no" alt="location-image" style="width: 100px; height: 100px;">
@@ -30,7 +33,7 @@ import SideSocial from './sideSocial.vue';
           <p style="font-size: 20px;">Av. 5 de Febrero 123</p>
           <p style="font-size: 20px;">16-17 / DIC</p>
           <p style="font-size: 20px;">¡Nos vemos allá! 🚀</p>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -52,10 +55,13 @@ import SideSocial from './sideSocial.vue';
              /* height: calc(100vh / 1.5);  */
             height: calc(100vh - 70px);
             background-color:aqua;
-        }
+        } 
     } 
      
-    
+    span{
+      font-family: var(--font-heading);
+      text-transform:uppercase;
+    }
     .video-banner {
         height: calc(100vh);
         background-color: aliceblue;
@@ -151,7 +157,7 @@ import SideSocial from './sideSocial.vue';
     }
 
     /* Responsividad */
-    @media (min-width: 768px) {
+    @media (min-width: 860px) {
       .video-banner .content h1 {
         font-size: 4rem;
       }
@@ -171,6 +177,21 @@ import SideSocial from './sideSocial.vue';
       width: fit-content;
       background-color: rgba(255,255,255,0.1);
       padding: 10px 10px 0px;
-      /* box-shadow: 0px 5px 5px #987820; */
+      display: flex;
+      align-items: center;
+    }
+@media screen and (max-width: 860px) {
+  .containerP{
+    width: 100%;
+  flex-direction: column;
+}
+}
+    .button-banner{
+      margin: 0 0 10px;
+    padding: 7px 12px;
+    text-transform: uppercase;
+    background: transparent;
+    color: #fff;
+    border: 3px solid var(--color-primary);
     }
     </style>

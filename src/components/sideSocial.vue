@@ -56,7 +56,7 @@
     writing-mode: vertical-rl;
     transform: rotate(360deg);
     color: white;
-    font-size: 0.875rem;
+    font-size: 16px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -74,8 +74,8 @@
   }
   
   .icon-circle {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     display: flex;
@@ -86,8 +86,8 @@
   
   .icon {
     color: var(--color-primary);
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
   
   .social-link:hover .icon-circle {

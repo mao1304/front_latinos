@@ -49,6 +49,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <!-- <h1 class="title-timer">Próximo evento</h1> -->
   <div class="countdown">
     <div class="countdown-item">
       <span class="number">{{ timeRemaining.days }}</span>
@@ -62,7 +63,7 @@ onUnmounted(() => {
       <span class="number">{{ timeRemaining.minutes }}</span>
       <span class="label">minutos</span>
     </div>
-    <div class="countdown-item">
+    <div class="countdown-item seconds">
       <span class="number">{{ timeRemaining.seconds }}</span>
       <span class="label">segundos</span>
     </div>
@@ -71,22 +72,39 @@ onUnmounted(() => {
 
 <style scoped>
 /* @import --color-primary from '@/assets/css/variables.css'; */
+.title-timer {
+  text-transform: uppercase;
+  font-size: 40px;
+}
 .countdown {
   display: flex;
-  gap: 2rem;
+  /* gap: 2rem; */
   justify-content: center;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
 }
 
 .countdown-item {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 100px;
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  .countdown {
+    padding: 0 2rem 4rem;
+
+  }
 }
 
 
 .number {
+  display: flex;
+  align-items: center;
   height: 2.5rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -101,6 +119,13 @@ onUnmounted(() => {
   /* color: #666; */
   margin-top: 0.5rem;
 }
+
+  @media (max-width: 460px) {
+    .seconds {
+      display: none;
+    }
+  }
+
 </style>
 
 <script lang="ts">

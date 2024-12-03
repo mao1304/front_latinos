@@ -19,8 +19,15 @@ const routes = [
         path: '/blog',
         name: 'blog',
         component: () => import('../views/blog.vue'),
-        meta: { title: 'Nuestros Blog' },
+        meta: { title: "Nuestros Blog's" },
     },
+    {
+        path: '/blog-details/:slug',
+        name: 'blogDetails',
+        component: () => import('../views/blogDetails.vue'),
+        meta: { title: '{{ post.title }}' },
+    },
+
     {
         path: '/:catchAll(.*)',
         name: '404',

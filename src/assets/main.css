@@ -44,14 +44,15 @@
 }
 
 body {
-    /* cursor: url('../components/icons/customCursor.svg') 16 16, auto; */
-    cursor: none;
+    cursor: url('../components/icons/customCursor.svg') 16 16, auto;
+    /* cursor: none; */
+    /* cursor: auto; */
 }
 
-button:hover,
+/* button:hover,
 a:hover,
 input:hover,
 select:hover,
 textarea:hover {
     cursor: url('../components/icons/customHoverCursor.svg') 16 16, pointer;
-}
+} */
