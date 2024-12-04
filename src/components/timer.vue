@@ -40,7 +40,7 @@ const calculateTimeRemaining = () => {
 
 onMounted(() => {
   calculateTimeRemaining();
-  timer = setInterval(calculateTimeRemaining, 1000); // Update every second
+  timer = setInterval(calculateTimeRemaining, 1000); 
 });
 
 onUnmounted(() => {

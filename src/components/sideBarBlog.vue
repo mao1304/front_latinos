@@ -1,5 +1,14 @@
 <script setup>
 import blog from '../stores/blogs.js';
+import { ref } from 'vue';
+
+const searchQuery = ref('');
+const emit = defineEmits(['search']);
+
+const handleSearch = () => {
+    console.log(searchQuery.value);
+    emit('search', searchQuery.value);
+};
 </script>
 
 <template>
@@ -7,12 +16,17 @@ import blog from '../stores/blogs.js';
     <div class="blog-sidebar sidebar-area mt-none-40" style="position: sticky; top: 20px; bottom: 20px;">
         <div class="widget mt-40">
             <h2 class="widget__title">Buscar</h2>
-            <form class="widget__search" action="#">
-                <input type="text" placeholder="Buscar...">
-                <button><i class="far fa-search"></i></button>
-            </form>
+            <form class="widget__search" @submit.prevent="handleSearch">
+                    <input 
+                        type="text" 
+                        v-model="searchQuery"
+                        placeholder="Buscar..."
+                        @input="handleSearch"
+                    >
+                    <button type="submit"><i class="far fa-search"></i></button>
+                </form>
         </div>
-        <div class="widget mt-40">
+        <!-- <div class="widget mt-40">
             <h2 class="widget__title">
                 <span>Categoría</span>
             </h2>
@@ -24,9 +38,9 @@ import blog from '../stores/blogs.js';
                 <li><a href="#!">WORK CULTURE <span>(10)</span></a></li>
                 <li><a href="#!">Digital Marketing <span>(13)</span></a></li>
                 <li><a href="#!">Product Design <span>(05)</span></a></li>
-                <li><a href="#!">Web Development <span>(03)</span></a></li> -->
+                <li><a href="#!">Web Development <span>(03)</span></a></li> 
             </ul>
-        </div>
+        </div> -->
         <div class="widget mt-40">
             <h2 class="widget__title">Publicaciones recientes</h2>
             <div class="widget__post">

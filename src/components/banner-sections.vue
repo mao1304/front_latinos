@@ -5,7 +5,8 @@
     >
       <div class="container">
         <div class="breadcrumb__content text-center">
-          <h2 class="breadcrumb__title" v-if="$route.path.startsWith('/blog-details')">{{ $route.meta.title || 'Página' }}</h2>
+          <!-- <h2 class="breadcrumb__title" v-if="$route.path.startsWith('/blog-details')">{{ $route.meta.title || 'Página' }}</h2> -->
+          <h2 class="breadcrumb__title">{{ $route.meta.title || 'Página' }}</h2>
           <ul class="breadcrumb__list">
             <li class="breadcrumb-item">
               <router-link to="/"><span>Inicio</span></router-link>
@@ -14,7 +15,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section>  
   </template>
   
   <script>

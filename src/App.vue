@@ -12,7 +12,7 @@ import CanvasCursor from './components/cursor.vue'
 
   <main>
     <CanvasCursor />
-    <transition name="slide" mode="out-in">
+    <transition name="fade" mode="out-in">
       <RouterView />
     </transition>
   </main>

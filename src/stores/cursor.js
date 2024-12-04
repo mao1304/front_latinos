@@ -10,7 +10,7 @@ export default function useCanvasCursor(canvasRef) {
         debug: true,
         friction: 0.47,
         trails: 20,
-        size: 50,
+        size: 20,
         dampening: 0.25,
         tension: 0.98,
     };
