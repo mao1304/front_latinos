@@ -4259,7 +4259,7 @@ body[data-aos-easing=ease] [data-aos] {
 
 @media (max-width: 767px) {
   .section-title .title {
-    font-size: 32px;
+    /* font-size: 32px; */
     letter-spacing: 0;
     line-height: 38.5px;
   }

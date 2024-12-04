@@ -3,6 +3,18 @@ import Timer from './timer.vue';
 // import { MapPin  } from 'lucide-vue-next';
 import  MapPin  from '../components/icons/MapPin.vue';
 import SideSocial from './sideSocial.vue';
+
+import  isMobile  from '../stores/isMobile.js';
+    
+    onMounted(() => {
+      if (isMobile()) {
+        const banner = document.querySelector('.video-banner');
+        const content = banner.querySelector('.content');
+        banner.style.height = 'calc(100vh - 60px)';
+        content.style.height = 'calc(100vh - 60px)';
+        console.log('isMobile');
+      }
+    })
 </script>
 
 <template>
@@ -11,7 +23,7 @@ import SideSocial from './sideSocial.vue';
       <SideSocial/>
     <video autoplay loop muted playsinline>
       <!-- <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4"> -->
-      <source src="../../public/C3308_1.mp4" type="video/mp4">
+      <source src="../../public/web2.mp4" type="video/mp4">
       Tu navegador no soporta el elemento de video.
     </video>
     <div class="overlay"></div>
@@ -43,11 +55,13 @@ import SideSocial from './sideSocial.vue';
     export default {
       name: 'banner',
     };
+    import { onBeforeMount, onMounted } from 'vue';
     </script>
     
     <style scoped>
      .video-banner {
-        height: calc(100vh - 102px);
+        /* height: calc(100vh - 102px); */
+        height: 100vh;
         background-color: aliceblue;
     }
     @media (max-width: 991px) {
@@ -165,8 +179,6 @@ import SideSocial from './sideSocial.vue';
       .video-banner .content p {
         font-size: 2rem;
       }
-      .textSmall{
-    }
 
       .video-banner .footer-gradient .counter {
         font-size: 3rem;
@@ -193,5 +205,10 @@ import SideSocial from './sideSocial.vue';
     background: transparent;
     color: #fff;
     border: 3px solid var(--color-primary);
+    }
+
+    .button-banner:hover{
+      background-color: var(--color-primary);
+      color: #000;
     }
     </style>

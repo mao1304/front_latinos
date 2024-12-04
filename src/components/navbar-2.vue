@@ -4,7 +4,7 @@
             <div class="container mxw_1785">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <a href="index.html"><img src="/img/reales/logo-blanco-entrenado-latinos.png" alt="" style="height: 90px; padding: 10px 10px 0;"></a>
+                        <router-link to="/"><img src="/img/reales/logo-blanco-entrenado-latinos.png" alt="" style="height: 90px; padding: 10px 10px 0;"></router-link>
                     </div>
                     <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
@@ -19,13 +19,13 @@
                                         <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li :class="{ active: $route.path === '/catalogo' }">
                                     <router-link to="/"><span>Catalogo</span></router-link>
                                 </li>
-                                <li>
+                                <li :class="{ active: $route.path === '/nosotros' }">
                                     <router-link to="/"><span>Nosotros</span></router-link>
                                 </li>
-                                <li >
+                                <li :class="{ active: $route.path === '/blog' }">
                                     <router-link to="/blog"><span>Blog</span></router-link>
                                 </li>
                                 <li :class="{ active: $route.path === '/contacto' }">
@@ -39,7 +39,7 @@
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                        <a href="index.html" rel="home"><img src="/img/logo/logo.svg" alt=""></a></div>
+                                        <router-link to="/"><img src="/img/logo/logo.svg" alt=""></router-link></div>
                                     <nav class="xb-header-nav">
                                         <ul class="xb-menu-primary clearfix">
                                             <li class="menu-item menu-item-has-children">
