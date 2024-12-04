@@ -80,7 +80,7 @@ onUnmounted(() => {
   display: flex;
   /* gap: 2rem; */
   justify-content: center;
-  padding: 0 2rem 2rem;
+  /* padding: 0 2rem 2rem; */
 }
 
 .countdown-item {

@@ -31,9 +31,9 @@ import  isMobile  from '../stores/isMobile.js';
       <div class="footer-gradient">
         <div class=" containerP "> 
           <span class="line">
-            <p>No esperes mas para hacer el cambio</p>
-            <h1>a tu vida</h1>
-            <button class="button-banner">Entérate como</button>
+            <p style="line-height: 1; margin-bottom:11px; font-weight: bold;">No esperes más para hacer el cambio</p>
+            <!-- <h1>a tu vida</h1> -->
+            <button class="button-banner">Conoce como</button>
           </span>      
           <div class="counter"><Timer target-date="2024-12-16T05:25:00" /></div>
         </div>
@@ -188,9 +188,11 @@ import  isMobile  from '../stores/isMobile.js';
     .containerP{
       width: fit-content;
       background-color: rgba(255,255,255,0.1);
-      padding: 10px 10px 0px;
+      padding: 20px;
       display: flex;
-      align-items: center;
+      /* align-items: center; */
+      border-radius: 15px;
+      margin-bottom:26px;
     }
 @media screen and (max-width: 860px) {
   .containerP{
@@ -198,17 +200,25 @@ import  isMobile  from '../stores/isMobile.js';
   flex-direction: column;
 }
 }
-    .button-banner{
-      margin: 0 0 10px;
-    padding: 7px 12px;
-    text-transform: uppercase;
-    background: transparent;
-    color: #fff;
-    border: 3px solid var(--color-primary);
-    }
+.line{
+  padding-right: 16px;
+    display: flex;
+    flex-direction:column;
+}
+.button-banner {
+  background: var(--color-primary);
+  border-radius: 10px;
+  padding: 12px 26px;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1;
+  letter-spacing: 4px;
+  font-size: 22px;
+  margin: 0;
+}
 
-    .button-banner:hover{
-      background-color: var(--color-primary);
-      color: #000;
-    }
-    </style>
+.button-banner:hover{
+  background-color: #000;
+  color: #fff;
+}
+</style>
