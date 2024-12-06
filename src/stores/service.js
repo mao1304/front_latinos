@@ -1,25 +1,31 @@
-const services = [{
-    id: 1,
-    title: "Entrenamiento insurance claims",
-    description: "Domina la gestión de reclamaciones de seguro en la industria del roofing",
-},
-{
-    id: 2,
-    title: "Capacitación privada",
-    description: "Formación personalizada para mejorar el rendimiento y el éxito de tu compañía",
-
-},
-{
-    id: 3,
-    title: "Marketing y publicidad",
-    description: "Optimiza tu presencia en redes sociales para ser el primer resultado",
-
-},
-{
-    id: 4,
-    title: "Estimados y suplementos",
-    description: "Enfrenta la minimización de daños por seguros, determinando soluciones razonables",
-
-},]
+const services = [
+    {
+        id: 1,
+        title: "Entrenamiento en reclamos de seguro",
+        description: "Aprende a gestionar reclamaciones de seguros en la industria del roofing.",
+        img: "/img/reales/seguros.webp",
+        link: "/seguros",
+    },
+    {
+        id: 2,
+        title: "Capacitación privada personalizada",
+        description: "Mejora el rendimiento y éxito de tu compañía con formación especializada.",
+        img: "https://html.xpressbuddy.com/auxa/assets/img/digital-marketing/dm-service/dm-srv04.png",
+        link: "/capacitacion",
+    },
+    {
+        id: 3,
+        title: "Estrategias de marketing y publicidad",
+        description: "Aumenta tu presencia en redes sociales y lidera los resultados de búsqueda.",
+        img: "https://html.xpressbuddy.com/auxa/assets/img/digital-marketing/dm-service/dm-srv02.png",
+        link: "/marketing",
+    },
+    {
+        id: 4,
+        title: "Estimados y gestión de suplementos",
+        description: "Minimiza pérdidas por seguros y encuentra soluciones viables y eficaces.",
+        img: "https://html.xpressbuddy.com/auxa/assets/img/digital-marketing/dm-service/dm-srv01.png",
+        link: "/suplementos",
+    },]
 
 export default services

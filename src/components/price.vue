@@ -38,7 +38,7 @@
                                 <span class="xb-item--number">$4,500</span>
                                 <p class="xb-item--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
-                            <a class="xb-item--btn" href="#!">Contact us</a>
+                            <a class="ds-pricing-info xb-item--btn" href="#!">Contact us</a>
                         </div>
                     </div>
                 </div>

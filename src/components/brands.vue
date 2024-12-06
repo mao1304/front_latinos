@@ -3,7 +3,7 @@
             <!-- dm-brand start -->
             <section class="brand pt-165 pb-130">
             <div class="container">
-                <span class="dm-brand-title d-block text-center mb-60" style="font-size: 40px; font-family: var(--font-heading); line-height: 35px;">NUESTRA RED DE COLABORADORES</span>
+                <span class="dm-brand-title d-block text-center mb-60" style="font-size: 40px; font-family: var(--font-heading); line-height: 35px; color: var(--color-primary);">NUESTRA RED DE COLABORADORES</span>
                 <div class="dm-brand-slider swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide dm-brand" >

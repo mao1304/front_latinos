@@ -98,12 +98,11 @@ import  isMobile  from '../stores/isMobile.js';
     }
     /* Estilos para la sección de video */
     .video-banner video {
-      /* position: absolute; */
-      /* top: 0; */
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      aspect-ratio: 16/9;
     }
 
     /* Capa de superposición */

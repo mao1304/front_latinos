@@ -96,7 +96,7 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .countdown {
-    padding: 0 2rem 4rem;
+    padding: 0.5rem 2rem 4rem;
 
   }
 }

@@ -1,3 +1,6 @@
+<script setup>
+const year = new Date().getFullYear();
+</script>
 <template>
         <footer class="dm-footer pos-rel">
         <div class="dm-footer-line pt-125 pb-120">
@@ -54,7 +57,7 @@
         </div>
         <div class="container">
             <div class="footer-copyright text-center">
-                Copyright © {{year}} <a href="">Entrenando Latinos In Roofing</a><br>
+                Copyright © {{ year }} <a href="">Entrenando Latinos In Roofing</a><br>
                 Powered by <a href="">Entrenando Latinos In Roofing</a>
             </div>
         </div>
@@ -69,7 +72,6 @@
 export default {
   name: 'Footer'
 }
-const year = new Date().getFullYear();
 </script>
 
 <style scoped>

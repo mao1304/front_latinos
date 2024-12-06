@@ -555,41 +555,7 @@
 		wow.init();
 	}
 
-	/*------------------------------------------
-	= counter
-	-------------------------------------------*/
-	if ($(".xbo").length) {
-		$('.xbo').appear();
-		$(document.body).on('appear', '.xbo', function (e) {
-			var odo = $(".xbo");
-			odo.each(function () {
-				var countNumber = $(this).attr("data-count");
-				$(this).html(countNumber);
-			});
-			window.xboOptions = {
-				format: 'd',
-			};
-		});
-	}
 
-	if ($(".xbo_trigger").length) {
-		var odo = $(".xbo_trigger");
-		odo.each(function () {
-			var countNumber = $(this).attr("data-count");
-			var odometerInstance = new Odometer({
-				el: this,
-				value: 0,
-				format: 'd',
-			});
-			odometerInstance.render();
-			odometerInstance.update(countNumber);
-		});
-
-		$('.xbo_trigger').appear();
-		$(document.body).on('appear', '.xboh', function (e) {
-			// This event handler can be empty or used for additional functionality if needed
-		});
-	}
 
 	/*------------------------------------------
 	= isotop
