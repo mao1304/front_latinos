@@ -2,9 +2,9 @@ const blog = [
     {
         id: 1,
         slug: 'blog-1',
-        img: 'https://entrenandolatinosinroofing.com/wp-content/uploads/2023/10/Articulo-1.jpg',
-        title: '¿Por qué la industria del roofing es un negocio de oportunidad?',
-        description: 'La industria del roofing es un negocio de oportunidad para la comunidad latina.',
+        img: 'https://entrenandolatinosinroofing.com/wp-content/uploads/2023/10/Articulo-4.jpg',
+        title: 'Cuando la Determinación Supera los Obstáculos',
+        description: 'De lavaplatos a vendedor exitoso en roofing: Una inspiradora historia de éxito y superación en Estados Unidos.',
         author: 'Luis Velazquez',
         date: '19 de octubre, 2023',
         short_date: '19/10/2023',

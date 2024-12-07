@@ -23,7 +23,7 @@
                                     <router-link to="/"><span>Catalogo</span></router-link>
                                 </li>
                                 <li :class="{ active: $route.path === '/nosotros' }">
-                                    <router-link to="/"><span>Nosotros</span></router-link>
+                                    <router-link to="/nosotros"><span>Nosotros</span></router-link>
                                 </li>
                                 <li :class="{ active: $route.path === '/blog' }">
                                     <router-link to="/blog"><span>Blog</span></router-link>

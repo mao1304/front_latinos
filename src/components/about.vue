@@ -1,6 +1,6 @@
 <template>
     <!-- about start  -->
-    <section class="about pos-rel">
+    <section class="about pos-rel" style="overflow-x: hidden;">
         <div class="container">
             <div class="section-title section-title--dm mb-195">
                 <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">about agency</span>
@@ -8,11 +8,11 @@
                 <h3 class="title wow skewIn">create <span>special Things</span></h3>
             </div>
             <div class="section-title">
-                <h3 class="title title-dm"><span>“Somos forjadores de sueños </span> <span> y victorias mediante la</span> <span> <span class="sp-one"> constancia y la disciplina”</span></span></h3><span>Entrenando Latinos In Roofing</span>
+                <h3 class="title title-dm"><span>“Somos forjadores de sueños </span> <span> y victorias mediante la</span> <span> <span class="sp-one"> constancia y la disciplina”</span></span><span style="font-size: 16px; text-align: end;">"Entrenando Latinos In Roofing"</span></h3>
             </div>
             <div class="dm-about--counter pt-80">
                 <div class="dm-about--wrapper">
-                    <div class="inner ul_li mb-55" style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <div class="inner ul_li mb-55 cont">
                         <div>
                             <div class="icon">
                                 <img src="/img/icon/hero01.svg" alt="">
@@ -33,7 +33,7 @@
                         </div>
 
                     </div>
-                    <div class="inner ul_li mb-55" style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <div class="inner ul_li mb-55 cont">
                         <div>
                         <div class="icon">
                             <img src="/img/icon/hero02.svg" alt="">
@@ -123,4 +123,21 @@ export default {
   },
 };
 </script> -->
+
+<style scoped>
+.cont{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+
+@media  (max-width: 1200px) {
+    .cont{
+        padding-left: 60px;
+        justify-content: flex-start;
+
+    }
+    
+}
+</style>
 

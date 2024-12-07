@@ -33,7 +33,7 @@ import  isMobile  from '../stores/isMobile.js';
           <span class="line">
             <p style="line-height: 1; margin-bottom:11px; font-weight: bold;">No esperes más para hacer el cambio</p>
             <!-- <h1>a tu vida</h1> -->
-            <button class="button-banner">Conoce como</button>
+            <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
           </span>      
           <div class="counter"><Timer target-date="2024-12-16T05:25:00" /></div>
         </div>

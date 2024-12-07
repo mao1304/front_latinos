@@ -27,7 +27,12 @@ const routes = [
         component: () => import('../views/blogDetails.vue'),
         meta: { title: '{{ post.title }}' },
     },
-
+    {
+        path: '/nosotros',
+        name: 'about',
+        component: () => import('../views/about.vue'),
+        meta: { title: 'Acerca de nosotros' },
+    },
     {
         path: '/:catchAll(.*)',
         name: '404',

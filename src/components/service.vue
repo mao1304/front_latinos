@@ -50,7 +50,7 @@ onMounted(() => {
           <div class="swiper-wrapper">
             <div v-for="service in services" :key="service.id" class="swiper-slide  dm-service">
               <div class="xb-item--holder per">
-                <h2 class="xb-item--title"><a href="service-single.html">.0{{service.id}} <br />{{ service.title }}</a></h2>
+                <h2 class="xb-item--title"><a href="service-single.html">{{ service.title }}</a></h2>
                 <div class="xb-item--content">{{ service.description }}</div>
               </div>
               <div class="xb-item--image">
@@ -79,7 +79,7 @@ onMounted(() => {
 
 @media screen and (max-width: 768px) {
   .per {
-    height: 240px;
+    height: 160px;
   }
 }
 </style>
