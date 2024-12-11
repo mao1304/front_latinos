@@ -1,0 +1,4 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--color-primary)" viewBox="0 0 30 30" id="Tiktok-Logo--Streamline-Logos-Block" height="40" width="40"><desc>Tiktok Logo Streamline Icon: https://streamlinehq.com</desc>
+    <path fill="var(--color-primary)" fill-rule="evenodd" d="M5 1a4 4 0 0 0 -4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4 -4V5a4 4 0 0 0 -4 -4H5Zm7.34 3.5h2.387c0 1.6 1.352 3.41 3.41 3.41v2.386c-1.417 -0.098 -2.628 -0.33 -3.41 -1.023v6.136c0 1.705 -1.348 4.091 -4.431 4.091 -3.766 0 -4.432 -3.41 -4.432 -4.432 0 -1.022 0.6 -4.432 4.772 -4.432v2.387c-1.091 -0.231 -2.386 0.681 -2.386 2.045 0 1.705 1.023 2.046 2.046 2.046 1.022 0 2.045 -1.023 2.045 -2.046V4.5Z" clip-rule="evenodd" stroke-width="1"></path></svg>
+</template>

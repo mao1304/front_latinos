@@ -7,19 +7,19 @@
                 <div class="dm-brand-slider swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide dm-brand" >
-                            <a href="#!"><img src="/img/digital-marketing/dm-brand/dm-brand01.png" alt=""></a>
+                            <a href="#!"><img src="https://eagleexpresscontractor.com/static/app_core/images/logoedit.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide dm-brand">
-                            <a href="#!"><img src="/img/digital-marketing/dm-brand/dm-brand02.png" alt=""></a>
+                            <a href="#!"><img src="https://triplerroofingomaha.com/static/app_core/assets/images/logo.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide dm-brand">
-                            <a href="#!"><img src="/img/digital-marketing/dm-brand/dm-brand03.png" alt=""></a>
+                            <a href="#!"><img src="https://precisionrestorationroofing.com/static/app_core/assets/img/logo/logo4.png" alt=""></a>
                         </div>
                         <div class="swiper-slide dm-brand">
-                            <a href="#!"><img src="/img/digital-marketing/dm-brand/dm-brand04.png" alt=""></a>
+                            <a href="#!"><img src="https://stevensroofingconstruction.com/static/app_core/images/log2.webp" alt=""></a>
                         </div>
                         <div class="swiper-slide dm-brand">
-                            <a href="#!"><img src="/img/digital-marketing/dm-brand/dm-brand05.png" alt=""></a>
+                            <a href="#!"><img src="https://1knox.com/static/app_core/assets/img/KNOX-10.png" alt=""></a>
                         </div>
                         <div class="swiper-slide dm-brand">
                             <a href="#!"><img src="/img/digital-marketing/dm-brand/dm-brand06.png" alt=""></a>
@@ -59,16 +59,11 @@ export default {
         modules: [Autoplay],
         slidesPerView: 4,
         spaceBetween: 30,
-        // centeredSlides: true,
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
         },
         loop: true,
-        // autoplay: {
-        //   delay: 300,
-        //   disableOnInteraction: false,
-        // },
         speed: 1000,
         breakpoints: {
           '1600': {
@@ -100,13 +95,8 @@ export default {
 </script>
 
 <style scoped>
-/* .brand::before {
-    content: '';
-  position: absolute;
-  bottom: 1000px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #d69d15 0%, #fed95d 100%);
-} */
+ /* .dm-brand{
+    width: 100%;
+    height: auto;
+ } */
 </style>

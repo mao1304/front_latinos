@@ -37,15 +37,6 @@ import  isMobile  from '../stores/isMobile.js';
           </span>      
           <div class="counter"><Timer target-date="2024-12-16T05:25:00" /></div>
         </div>
-        <!-- <div class="containerP " style="border-left: solid 2px #fff; display: flex ; flex-direction: column; align-items: center; ">
-          <h3 class="location"><MapPin class="icon"/>Frankfort KY</h3>
-          <div class="location-image">
-            <img src="https://lh5.googleusercontent.com/p/AF1QipMZdeDkyKlNH-SrNOl3U8GglxjYZsqmmRBsH2R9=w540-h312-n-k-no" alt="location-image" style="width: 100px; height: 100px;">
-          </div>
-          <p style="font-size: 20px;">Av. 5 de Febrero 123</p>
-          <p style="font-size: 20px;">16-17 / DIC</p>
-          <p style="font-size: 20px;">¡Nos vemos allá! 🚀</p>
-        </div> -->
       </div>
     </div>
   </section>
@@ -190,9 +181,16 @@ import  isMobile  from '../stores/isMobile.js';
       padding: 20px;
       display: flex;
       /* align-items: center; */
-      border-radius: 15px;
-      margin-bottom:26px;
     }
+@media (min-width: 769px) {
+.containerP{
+/* width: 100%; */
+margin-bottom:26px;
+border-radius: 15px;
+
+
+}
+}
 @media screen and (max-width: 860px) {
   .containerP{
     width: 100%;

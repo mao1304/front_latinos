@@ -12,15 +12,17 @@
                                 <li :class="{ active: $route.path === '/' }">
                                     <router-link to="/"><span>Inicio</span></router-link>   
                                 </li>
-                                <li :class="{ active: $route.path.startsWith('/servicios') }" class="menu-item-has-children ">
+                                <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }" class="menu-item-has-children ">
                                     <router-link to=""><span>Servicios</span></router-link>
                                     <ul class="submenu">
-                                        <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
-                                        <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li>
+                                        <li v-for ="servicio in servicios" :key="servicio.id" :class="{ active: $route.path === servicio.link }"
+                                         ><router-link :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
+                                        <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
+                                        <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
                                     </ul>
                                 </li>
                                 <li :class="{ active: $route.path === '/catalogo' }">
-                                    <router-link to="/"><span>Catalogo</span></router-link>
+                                    <a href="https://links.entrenandolatinosinroofing.com/catalogo/" target="_blank"><span>Catalogo</span></a>
                                 </li>
                                 <li :class="{ active: $route.path === '/nosotros' }">
                                     <router-link to="/nosotros"><span>Nosotros</span></router-link>
@@ -28,6 +30,9 @@
                                 <li :class="{ active: $route.path === '/blog' }">
                                     <router-link to="/blog"><span>Blog</span></router-link>
                                 </li>
+                                <li :class="{ active: $route.path === '/testimonios' }">
+                            <router-link to="/testimonios"><span>Testimonios</span></router-link>
+                        </li>
                                 <li :class="{ active: $route.path === '/contacto' }">
                                 <router-link to="/contacto"><span>Contacto</span></router-link>
                                     <!-- <a href="contact.html"><span>Contact</span></a> -->
@@ -42,7 +47,32 @@
                                         <router-link to="/"><img src="/img/logo/logo.svg" alt=""></router-link></div>
                                     <nav class="xb-header-nav">
                                         <ul class="xb-menu-primary clearfix">
-                                            <li class="menu-item menu-item-has-children">
+                                            <li :class="{ active: $route.path === '/' }">
+                                                    <router-link to="/"><span>Inicio</span></router-link>   
+                                                </li>
+                                                <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }" class="menu-item menu-item-has-children ">
+                                                    <router-link to=""><span>Servicios</span></router-link>
+                                                    <ul class="sub-menu">
+                                                        <li v-for ="servicio in servicios" :key="servicio.id" :class="{ active: $route.path === servicio.link }"
+                                                        ><router-link :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
+                                                        <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
+                                                        <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
+                                                    </ul>
+                                                </li>
+                                                <li :class="{ active: $route.path === '/catalogo' }">
+                                                    <a href="https://links.entrenandolatinosinroofing.com/catalogo/" target="_blank"><span>Catalogo</span></a>
+                                                </li>
+                                                <li :class="{ active: $route.path === '/nosotros' }">
+                                                    <router-link to="/nosotros"><span>Nosotros</span></router-link>
+                                                </li>
+                                                <li :class="{ active: $route.path === '/blog' }">
+                                                    <router-link to="/blog"><span>Blog</span></router-link>
+                                                </li>
+                                                <li :class="{ active: $route.path === '/contacto' }">
+                                                <router-link to="/contacto"><span>Contacto</span></router-link>
+                                                    <!-- <a href="contact.html"><span>Contact</span></a> -->
+                                                </li>
+                                            <!-- <li class="menu-item menu-item-has-children">
                                                 <a href="#"><span>Home</span></a>
                                                 <ul class="sub-menu">
                                                     <li><a href="index.html"><span>Digital Marketing</span></a></li>
@@ -86,7 +116,7 @@
                                                     <li><a href="blog-single.html"><span>News Details</span></a></li>
                                                 </ul>
                                             </li>
-                                            <li class="menu-item"><a href="contact.html"><span>Contact</span></a></li>
+                                            <li class="menu-item"><a href="contact.html"><span>Contact</span></a></li> -->
                                         </ul>
                                     </nav>
                                 </div>
@@ -122,49 +152,34 @@
             <div class="col-xl-8 col-md-7 left-area">
                 <nav>
                     <ul>
-                        <li class="menu-item-has-children">
-                            <a href="#">Home</a>
+                        <li :class="{ active: $route.path === '/' }">
+                            <router-link to="/"><span>Inicio</span></router-link>   
+                        </li>
+                        <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }" class="menu-item menu-item-has-children ">
+                            <router-link to=""><span>Servicios</span></router-link>
                             <ul class="sub">
-                                <li><a href="index.html"><span>Digital Marketing</span></a></li>
-                                <li><a href="home-2.html"><span>Digital Studio</span></a></li>
-                                <li><a href="home-3.html"><span>Branding</span></a></li>
+                                <li v-for ="servicio in servicios" :key="servicio.id" :class="{ active: $route.path === servicio.link }"
+                                ><router-link :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
+                                <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
+                                <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
                             </ul>
                         </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">Pages</a>
-                            <ul class="sub">
-                                <li class="current-menu-item"><a href="about.html"><span>About</span></a></li>
-                                <li><a href="service.html"><span>Services</span></a></li>
-                                <li><a href="service-single.html"><span>Service Details</span></a></li>
-                                <li><a href="team.html"><span>Team</span></a></li>
-                                <li><a href="team-single.html"><span>Team Details</span></a></li>
-                                <li><a href="career.html"><span>Career</span></a></li>
-                                <li><a href="career-single.html"><span>Career Details</span></a></li>
-                                <li><a href="faq.html"><span>FAQ</span></a></li>
-                            </ul>
+                        <li :class="{ active: $route.path === '/catalogo' }">
+                            <a href="https://links.entrenandolatinosinroofing.com/catalogo/" target="_blank"><span>Catalogo</span></a>
                         </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">Portfolio</a>
-                            <ul class="sub">
-                                <li><a href="project.html"><span>Portfolio</span></a></li>
-                                <li><a href="project-single.html"><span>Portfolio Details</span></a></li>
-                            </ul>
+                        <li :class="{ active: $route.path === '/nosotros' }">
+                            <router-link to="/nosotros"><span>Nosotros</span></router-link>
                         </li>
-                        <li class="menu-item-has-children"><a href="#">Shop</a>
-                            <ul class="sub">
-                                <li><a href="shop.html"><span>Products</span></a></li>
-                                <li><a href="shop-single.html"><span>Single Product</span></a></li>
-                                <li><a href="cart.html"><span>Cart</span></a></li>
-                                <li><a href="checkout.html"><span>Checkout</span></a></li>
-                            </ul>
+                        <li :class="{ active: $route.path === '/blog' }">
+                            <router-link to="/blog"><span>Blog</span></router-link>
                         </li>
-                        <li class="menu-item-has-children"><a href="#">News</a>
-                            <ul class="sub">
-                                <li><a href="blog.html"><span>News</span></a></li>
-                                <li><a href="blog-single.html"><span>News Details</span></a></li>
-                            </ul>
+                        <li :class="{ active: $route.path === '/testimonios' }">
+                            <router-link to="/testimonios"><span>Testimonios</span></router-link>
                         </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li :class="{ active: $route.path === '/contacto' }">
+                        <router-link to="/contacto"><span>Contacto</span></router-link>
+                            <!-- <a href="contact.html"><span>Contact</span></a> -->    
+                        </li>
                     </ul> 
                 </nav> 
             </div>
@@ -195,11 +210,17 @@
 </template>
 
 <script>
+import servicios from '@/stores/service.js'
 export default {
-    name: 'Navbar', 
+    name: 'Navbar',
+    data() {
+        return {
+            servicios,
+        };
+    }, 
     methods: {
         header() {
-
+            console.log(servicios); // Servicios importado
             var headerAnimation = gsap.timeline({ yoyo: false, reversed: true });
             headerAnimation.pause();
 

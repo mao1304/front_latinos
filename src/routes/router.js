@@ -34,6 +34,36 @@ const routes = [
         meta: { title: 'Acerca de nosotros' },
     },
     {
+        path: '/detalle-servicio-seguros',
+        name: 'seguros',
+        component: () => import('../views/service1.vue'),
+        meta: { title: 'Nuestro Servicio de seguros' },
+    },
+    {
+        path: '/detalle-servicio-Capacitacion',
+        name: 'Capacitacion',
+        component: () => import('../views/service2.vue'),
+        meta: { title: 'Nuestro Servicio de Capacitación' },
+    },
+    {
+        path: '/detalle-servicio-marketing',
+        name: 'marketing',
+        component: () => import('../views/service3.vue'),
+        meta: { title: 'Nuestro Servicio de Marketing' },
+    },
+    {
+        path: '/detalle-servicio-suplementos',
+        name: 'suplementos',
+        component: () => import('../views/service4.vue'),
+        meta: { title: 'Nuestro Servicio de Suplementos' },
+    },
+    {
+        path: '/testimonios',
+        name: 'testimonios',
+        component: () => import('../views/testimonials.vue'),
+        meta: { title: 'palabras de nuestros clientes' },
+    },
+    {
         path: '/:catchAll(.*)',
         name: '404',
         component: () => import('../views/404.vue'),

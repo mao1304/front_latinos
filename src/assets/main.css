@@ -11,6 +11,7 @@
 @import './css/swiper.min.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ephesis&family=Hind:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gotham-9');
 
 .bebas-neue-regular {
     font-family: "Bebas Neue", sans-serif;
@@ -48,11 +49,3 @@ body {
     /* cursor: none; */
     /* cursor: auto; */
 }
-
-/* button:hover,
-a:hover,
-input:hover,
-select:hover,
-textarea:hover {
-    cursor: url('../components/icons/customHoverCursor.svg') 16 16, pointer;
-} */

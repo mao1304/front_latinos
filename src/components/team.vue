@@ -41,7 +41,7 @@ onMounted(() => {
                 <section class="team-area z-3 pt-150 pb-150" style="overflow-x: hidden;">
                 <div class="container">
                     <div class="section-title text-center mb-75">
-                        <span class="sub-title wow fadeInRight" data-wow-duration=".7s">Our Team</span>
+                        <span class="sub-title wow fadeInRight" data-wow-duration=".7s">Equipo</span>
                         <div class="clearfix"></div>
                         <h3 class="title wow skewIn">"El Equipo Detrás de Entrenando Latinos in Roofing: <br> <span>Unidos por Tu Éxito</span>"</h3>
                     </div>
@@ -84,7 +84,7 @@ onMounted(() => {
                         </div>                        <div class="swiper-slide">
                             <div class="xb-team pos-rel">
                                 <div class="xb-item--img"  :style="{ backgroundImage: 'url(https://entrenandolatinosinroofing.com/wp-content/uploads/2024/02/bg-form_banner_small.webp)' }">
-                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/11/32_eduard_moreno_backend_developer.webp" alt="">
+                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/11/31_jhonny_bohorquez_front_end_eveloper.webp" alt="">
                                 </div>
                                 <div class="xb-item--holder text-center">
                                     <h3 class="xb-item--title"><a href="team-single.html">Gohendra Maris</a></h3>
@@ -100,7 +100,7 @@ onMounted(() => {
                         </div>                        <div class="swiper-slide">
                             <div class="xb-team pos-rel">
                                 <div class="xb-item--img"  :style="{ backgroundImage: 'url(https://entrenandolatinosinroofing.com/wp-content/uploads/2024/02/bg-form_banner_small.webp)' }">
-                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/11/32_eduard_moreno_backend_developer.webp" alt="">
+                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/07/26_camilo_barrera_backend_developer.webp" alt="">
                                 </div>
                                 <div class="xb-item--holder text-center">
                                     <h3 class="xb-item--title"><a href="team-single.html">Gohendra Maris</a></h3>
@@ -116,7 +116,7 @@ onMounted(() => {
                         </div>                        <div class="swiper-slide">
                             <div class="xb-team pos-rel">
                                 <div class="xb-item--img"  :style="{ backgroundImage: 'url(https://entrenandolatinosinroofing.com/wp-content/uploads/2024/02/bg-form_banner_small.webp)' }">
-                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/11/32_eduard_moreno_backend_developer.webp" alt="">
+                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/11/31_jhonny_bohorquez_front_end_eveloper.webp" alt="">
                                 </div>
                                 <div class="xb-item--holder text-center">
                                     <h3 class="xb-item--title"><a href="team-single.html">Gohendra Maris</a></h3>
@@ -132,7 +132,7 @@ onMounted(() => {
                         </div>                        <div class="swiper-slide">
                             <div class="xb-team pos-rel">
                                 <div class="xb-item--img">
-                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/11/32_eduard_moreno_backend_developer.webp" alt="">
+                                    <img src="https://entrenandolatinosinroofing.com/wp-content/uploads/2024/07/26_camilo_barrera_backend_developer.webp" alt="">
                                 </div>
                                 <div class="xb-item--holder text-center">
                                     <h3 class="xb-item--title"><a href="team-single.html">Gohendra Maris</a></h3>

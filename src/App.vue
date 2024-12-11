@@ -3,6 +3,7 @@ import Footer from './components/footer.vue';
 // import Navbar from './components/navbar.vue';
 import Navbar from './components/navbar-2.vue';
 import CanvasCursor from './components/cursor.vue'
+import whatsappContact from './components/whatsappContact.vue';
 </script>
 
 <template>
@@ -11,12 +12,8 @@ import CanvasCursor from './components/cursor.vue'
   </header>
 
   <main>
+    <whatsappContact />
     <CanvasCursor />
-    <!-- <router-view v-slot="{ Component }">
-      <transition >
-        <component :is="Component" />
-      </transition>
-    </router-view> -->
     <transition name="fade" mode="out-in">
       <RouterView />
     </transition>

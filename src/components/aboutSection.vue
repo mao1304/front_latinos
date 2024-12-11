@@ -15,8 +15,11 @@
                     <div class="about-img pos-rel">
                         <img src="/img/about/img02.jpg" alt="">
                         <div class="about-year">
-                            <h2 class="xb-odm"><span class="xbo" data-count="22">00</span></h2>
-                            <p>Year of <br>Experience</p>
+                            <!-- <h2 class="xb-odm experience"><NumberCounter :end-value="10" prefix="+" /></h2>
+                            <p style="margin-top: 20px;">Year of <br>Experience</p> -->
+                            <h2 class="xb-odm" ><NumberCounter :end-value="10" style="color: #000;"/></h2>
+                            <p style="margin-top: 10px;">Year of <br>Experience</p>
+
                         </div>
                     </div>
                     <div class="row mt-50">
@@ -31,33 +34,31 @@
                             <div class="row mt-none-30">
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-30">
                                     <div class="xb-funfact text-center">
-                                        <h3 class="xb-item--number xb-odm"><span class="xbo"
-                                                data-count="90">00</span><span class="suffix">+</span></h3>
-                                        <h6 class="xb-item--title">Project Delivered</h6>
+                                        <h3 class="xb-item--number xb-odm"><NumberCounter :end-value="30" prefix="+"/></h3>
+                                        <h6 class="xb-item--title">Entrenamientos realizados</h6>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-30">
                                     <div class="xb-funfact text-center">
-                                        <h3 class="xb-item--number xb-odm"><span class="xbo" data-count="13">00</span>
+                                        <h3 class="xb-item--number xb-odm"><NumberCounter :end-value="2000" suffix="K" prefix="+"/>
                                         </h3>
-                                        <h6 class="xb-item--title">Awards</h6>
+                                        <h6 class="xb-item--title">Latinos entrenados</h6>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-30">
                                     <div class="xb-funfact text-center">
                                         <h3 class="xb-item--number">
-                                            <NumberCounter :end-value="1000" suffix="M" prefix="+$" />
+                                            <NumberCounter :end-value="50" prefix="+"/>
                                         </h3>
-                                        <h6 class="xb-item--title">Years Experience</h6>
+                                        <h6 class="xb-item--title">compañías con soporte</h6>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-6 mt-30">
                                     <div class="xb-funfact text-center">
                                         <h3 class="xb-item--number xb-odm">
-                                            <span class="xbo" data-count="88">00</span>
-                                            <span class="suffix">+</span>
+                                            <NumberCounter :end-value="100" suffix="M" prefix="+$" />
                                         </h3>
-                                        <h6 class="xb-item--title">Happy Clients</h6>
+                                        <h6 class="xb-item--title">Dólares en la industria</h6>
                                     </div>
                                 </div>
                             </div>
@@ -71,3 +72,20 @@
 <script setup lang="ts" >
 import NumberCounter from './NumberCounter.vue';
 </script>
+
+
+<style scoped>
+.experience{
+    height:105px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 769px) {
+    .experience{
+        height: 44px;
+    padding-bottom: 0px;
+
+    }
+}
+</style>

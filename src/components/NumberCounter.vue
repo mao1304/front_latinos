@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, computed } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
-import SlideDigit from './SlideDigit.vue';
 
 const props = defineProps<{
   endValue: number;
@@ -13,10 +12,6 @@ const props = defineProps<{
 const currentValue = ref(0);
 const targetRef = ref<HTMLElement | null>(null);
 const hasAnimated = ref(false);
-
-const digits = computed(() => {
-  return currentValue.value.toString().padStart(props.endValue.toString().length, '0').split('').map(Number);
-});
 
 const animateValue = (start: number, end: number, duration: number) => {
   const startTime = performance.now();
@@ -62,36 +57,32 @@ onMounted(() => {
 
 <template>
   <div ref="targetRef" class="number-counter">
-    <div class="digits-container">
     <span v-if="prefix" class="prefix">{{ prefix }}</span>
-      <SlideDigit 
-        v-for="(digit, index) in digits" 
-        :key="index" 
-        :digit="digit"
-      />
-    </div>
+    <span class="value">{{ currentValue }}</span>
     <span v-if="suffix" class="suffix">{{ suffix }}</span>
   </div>
 </template>
 
+
 <style scoped>
 .number-counter {
   display: inline-flex;
-  /* align-items: center;
-  font-size: 2.5rem;
-  font-weight: bold;
+  align-items: center;
+  /* font-size: 2.5rem; */
+  /* font-weight: bold; */
   color: #ffffff;
-  font-family: 'Roboto Mono', monospace; */
+  /* font-family: 'Roboto Mono', monospace; */
 }
 
-.digits-container {
-  display: flex;
-  /*gap: 4px;*/
+.value {
+  min-width: 3ch;
+  /* text-align: right; */
 }
 
-/* .suffix {
-  margin-left: 0.5rem;
+.suffix {
+  /* margin-left: 0.5rem; */
   font-size: 0.8em;
   color: #ffffff;
-} */
+}
 </style>
+

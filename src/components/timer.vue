@@ -94,7 +94,7 @@ onUnmounted(() => {
   margin: 0 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .countdown {
     padding: 0.5rem 2rem 4rem;
 

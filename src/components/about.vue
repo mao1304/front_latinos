@@ -48,7 +48,7 @@
                                 <img src="/img/icon/hero01.svg" alt="">
                             </div>
                             <div class="holder">
-                                <h3 class="number xb-odm"><NumberCounter :end-value="1000" suffix="M" prefix="+$" /></h3>
+                                <h3 class="number xb-odm"><NumberCounter :end-value="100" suffix="M" prefix="+$" /></h3>
                                 <p class="content">Dólares en la industria</p>
                             </div>
                         </div>
