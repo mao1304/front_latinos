@@ -5,27 +5,33 @@ const isMenuOpen = ref(false);
 
 const contacts = [
   {
-    name: 'Web',
-    phone: '+573185217514',
+    name: 'Membresía Premium',
     encargado: 'Luis Velásquez',
+    phoneVisible: '+1 (502)-320-4804',
+    phone: '+15023204804',
     color: '#25D366'
   },
   {
     name: 'Soporte',
-    phone: '+1234567891',
+
     encargado: 'Luis Gerardo',
+    phoneVisible: '+1 (502)-692-7019',
+    phone: '+15026927019',
     color: '#128C7E'
   },
   {
     name: 'Estimados y Suplementos',
     encargado: 'Zharick',
-    phone: '+1234567892',
+    phoneVisible: '+1 (502)-699-1093',
+    phone: '+15026991093',
     color: '#075E54'
   },
   {
     name: 'Atención al Cliente',
     encargado: 'Aura',
-    phone: '+1234567893',
+    // phone: '+1 (502) 682-2038',
+    phoneVisible: '+1 (502)-682-2038',
+    phone: '+15026822038',
     color: '#34B7F1'
   }
 ];
@@ -52,7 +58,7 @@ const toggleMenu = () => {
       >
         <span class="contact-name">{{ contact.name }}</span>
         <span class="contact-lider">{{ contact.encargado }}</span>
-        <span class="contact-phone">{{ contact.phone }}</span>
+        <span class="contact-phone">{{ contact.phoneVisible }}</span>
 
       </div>
     </div>

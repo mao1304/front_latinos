@@ -23,6 +23,12 @@
                             <a href="https://www.tiktok.com/@entrenandolatinosinroofi" target="_blank" class="link-social"><span class="contact-icon"> <TikTok /> TikTok</span></a>
                             <a href="https://www.linkedin.com/in/luisvelasquezcaicedo" target="_blank" class="link-social"><span class="contact-icon"> <LinkedinIcon /> LinkedIn</span></a>
                         </li>
+                        <li><h3 class="contact-subtitle">Horarios</h3>
+                            <span style="display: inline-grid;">
+                                <span>Lunes a Viernes de 8:00 am - 10:00 pm</span> 
+                                <span>Sabados de 9:00 am - 1:00 pm</span>
+                            </span>
+                        </li>
                     </ul>
                 </div>
                 <div class="row">
