@@ -8,11 +8,12 @@ import bento from '@/components/bento.vue';
 </script>
 
 <template>
-    
-    <BannerSections />
-    <bento />
-    <aboutSection />
-    <Objetives />
-    <team />
-    <!-- <test /> -->
+    <div>
+        <BannerSections />
+        <bento />
+        <aboutSection />
+        <Objetives />
+        <team />
+        <!-- <test /> -->
+    </div>
 </template>

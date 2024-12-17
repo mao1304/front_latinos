@@ -15,6 +15,5 @@ import Videos from '@/components/videos.vue';
     <Menbrecia />
     <About />
     <Videos />
-    <!-- <price /> -->
   </div>
 </template>

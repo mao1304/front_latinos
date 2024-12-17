@@ -2,32 +2,32 @@
 const services = [
     {
         id: 1,
-        title: "Entrenamiento en reclamos de seguro",
-        description: "Aprende a gestionar reclamaciones de seguros en la industria del roofing.",
-        img: "/img/reales/seguros.webp",
+        title: "Gestión de reclamos de seguro",
+        description: "Domina la gestión de reclamaciones en roofing.",
+        img: "/img/reales/FOTOGRAFIAS/service.jpg",
         link: "/detalle-servicio-seguros",
     },
     {
         id: 2,
-        title: "Capacitación privada personalizada",
-        description: "Mejora el rendimiento y éxito de tu compañía con formación especializada.",
-        img: "https://html.xpressbuddy.com/auxa/assets/img/digital-marketing/dm-service/dm-srv04.png",
-        link: "/detalle-servicio-Capacitacion",
+        title: "Capacitación personalizada",
+        description: "Optimiza el éxito de tu compañía.",
+        img: "/img/reales/FOTOGRAFIAS/capacitacion.jpg",
+        link: "/detalle-servicio-Capacitación",
     },
     {
         id: 3,
-        title: "Estrategias de marketing y publicidad",
-        description: "Aumenta tu presencia en redes sociales y lidera los resultados de búsqueda.",
-        img: "https://html.xpressbuddy.com/auxa/assets/img/digital-marketing/dm-service/dm-srv02.png",
+        title: "Marketing y publicidad",
+        description: "Lidera en redes sociales y búsquedas.",
+        img: "/img/reales/FOTOGRAFIAS/marketing.jpg",
         link: "/detalle-servicio-marketing",
     },
     {
         id: 4,
-        title: "Estimados y gestión de suplementos",
-        description: "Minimiza pérdidas por seguros y encuentra soluciones viables y eficaces.",
-        img: "https://html.xpressbuddy.com/auxa/assets/img/digital-marketing/dm-service/dm-srv01.png",
+        title: "Gestión de suplementos",
+        description: "Reduce pérdidas y encuentra soluciones eficaces.",
+        img: "/img/reales/FOTOGRAFIAS/estimados.jpg",
         link: "/detalle-servicio-suplementos",
-    },]
-
+    },
+]
 export default services
 

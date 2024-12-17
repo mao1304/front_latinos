@@ -50,6 +50,7 @@
   --font-heading: 'Marcellus', serif;
   --gradient-primary: linear-gradient(0deg, rgba(137, 104, 24, 1) 48%, rgba(255, 230, 92, 1) 94%);
   --color-primary: #f3c037;
+  --color-secondary: #fff;
   --color-heading: #131217;
   --xb-track-color: #16171B;
   --color-dark: #0F172A;
@@ -8812,8 +8813,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 }
 
 .post-thumbnail-wrapper img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); */
   -webkit-transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   -o-transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   transition: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
@@ -9892,7 +9893,7 @@ blockquote .quote {
   padding-top: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   margin-top: -1px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 18px;
   font-weight: 500;
   color: var(--color-white);
@@ -9915,7 +9916,8 @@ blockquote .quote {
 }
 
 .contact-location li span {
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  margin-left: 5px;
   display: inline-block;
 }
 
@@ -13982,8 +13984,20 @@ abbr[title] {
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(22, 23, 27, 0.8);
-  mix-blend-mode: luminosity;
+  background: rgba(22, 23, 27, 0.6);
+  /* mix-blend-mode: luminosity; */
+}
+
+.dm-about--image::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(22, 23, 27, 0.7);
 }
 
 .services-bg {
@@ -14089,12 +14103,12 @@ abbr[title] {
 }
 
 .dm-service .xb-item--content {
-  color: #B2B6B8;
+  color: #fff;
 }
 
 .dm-service .xb-item--image {
   margin-bottom: 134px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -14216,7 +14230,7 @@ abbr[title] {
   height: 91%;
   height: calc(100% - 9%);
   width: 49%;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 .dm-about--button {

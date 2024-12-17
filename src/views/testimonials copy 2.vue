@@ -227,10 +227,4 @@ function selectVideo(index) {
         width: 200px;
     }
 }
-
-.video-container {
-    isolation: isolate;
-    /* Aísla el contexto de apilamiento */
-    z-index: 1;
-}
 </style>

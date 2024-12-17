@@ -1,28 +1,33 @@
 <template>
-        <header id="xb-header-area" class="header-area header-style-four is-sticky" style="position: absolute; width: 100%;">
+    <header id="xb-header-area" class="header-area header-style-four is-sticky"
+        style="position: absolute; width: 100%;">
         <div class="xb-header">
             <div class="container mxw_1785">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <router-link to="/"><img src="/img/reales/logo-blanco-entrenado-latinos.png" alt="" style="height: 90px; padding: 10px 10px 0;"></router-link>
+                        <router-link to="/"><img src="/img/reales/logo-blanco-entrenado-latinos.png" alt=""
+                                style="height: 90px; padding: 10px 10px 0;"></router-link>
                     </div>
                     <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
                             <ul>
                                 <li :class="{ active: $route.path === '/' }">
-                                    <router-link to="/"><span>Inicio</span></router-link>   
+                                    <router-link to="/"><span>Inicio</span></router-link>
                                 </li>
-                                <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }" class="menu-item-has-children ">
+                                <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }"
+                                    class="menu-item-has-children ">
                                     <router-link to=""><span>Servicios</span></router-link>
                                     <ul class="submenu">
-                                        <li v-for ="servicio in servicios" :key="servicio.id" :class="{ active: $route.path === servicio.link }"
-                                         ><router-link :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
+                                        <li v-for="servicio in servicios" :key="servicio.id"
+                                            :class="{ active: $route.path === servicio.link }"><router-link
+                                                :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
                                         <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
                                         <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
                                     </ul>
                                 </li>
                                 <li :class="{ active: $route.path === '/catalogo' }">
-                                    <a href="https://links.entrenandolatinosinroofing.com/catalogo/" target="_blank"><span>Catalogo</span></a>
+                                    <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
+                                        target="_blank"><span>Catalogo</span></a>
                                 </li>
                                 <li :class="{ active: $route.path === '/nosotros' }">
                                     <router-link to="/nosotros"><span>Nosotros</span></router-link>
@@ -30,11 +35,17 @@
                                 <li :class="{ active: $route.path === '/blog' }">
                                     <router-link to="/blog"><span>Blog</span></router-link>
                                 </li>
-                                <li :class="{ active: $route.path === '/testimonios' }">
-                            <router-link to="/testimonios"><span>Testimonios</span></router-link>
-                        </li>
+                                <li :class="{ active: $route.path === '/testimonios' }" class="menu-item-has-children ">
+                                    <router-link to="/testimonios"><span>Experiencias</span></router-link>
+                                    <ul class="submenu">
+                                        <li><router-link to="/testimonios"><span>Experiencias v1</span></router-link>
+                                        </li>
+                                        <li><router-link to="/testimonios-2"><span>Experiencias v2</span></router-link>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li :class="{ active: $route.path === '/contacto' }">
-                                <router-link to="/contacto"><span>Contacto</span></router-link>
+                                    <router-link to="/contacto"><span>Contacto</span></router-link>
                                     <!-- <a href="contact.html"><span>Contact</span></a> -->
                                 </li>
                             </ul>
@@ -44,34 +55,39 @@
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                        <router-link to="/"><img src="/img/logo/logo.svg" alt=""></router-link></div>
+                                        <router-link to="/"><img src="/img/logo/logo.svg" alt=""></router-link>
+                                    </div>
                                     <nav class="xb-header-nav">
                                         <ul class="xb-menu-primary clearfix">
                                             <li :class="{ active: $route.path === '/' }">
-                                                    <router-link to="/"><span>Inicio</span></router-link>   
-                                                </li>
-                                                <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }" class="menu-item menu-item-has-children ">
-                                                    <router-link to=""><span>Servicios</span></router-link>
-                                                    <ul class="sub-menu">
-                                                        <li v-for ="servicio in servicios" :key="servicio.id" :class="{ active: $route.path === servicio.link }"
-                                                        ><router-link :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
-                                                        <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
+                                                <router-link to="/"><span>Inicio</span></router-link>
+                                            </li>
+                                            <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }"
+                                                class="menu-item menu-item-has-children ">
+                                                <router-link to=""><span>Servicios</span></router-link>
+                                                <ul class="sub-menu">
+                                                    <li v-for="servicio in servicios" :key="servicio.id"
+                                                        :class="{ active: $route.path === servicio.link }"><router-link
+                                                            :to="servicio.link"><span>{{ servicio.title
+                                                                }}</span></router-link></li>
+                                                    <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
                                                         <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
-                                                    </ul>
-                                                </li>
-                                                <li :class="{ active: $route.path === '/catalogo' }">
-                                                    <a href="https://links.entrenandolatinosinroofing.com/catalogo/" target="_blank"><span>Catalogo</span></a>
-                                                </li>
-                                                <li :class="{ active: $route.path === '/nosotros' }">
-                                                    <router-link to="/nosotros"><span>Nosotros</span></router-link>
-                                                </li>
-                                                <li :class="{ active: $route.path === '/blog' }">
-                                                    <router-link to="/blog"><span>Blog</span></router-link>
-                                                </li>
-                                                <li :class="{ active: $route.path === '/contacto' }">
+                                                </ul>
+                                            </li>
+                                            <li :class="{ active: $route.path === '/catalogo' }">
+                                                <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
+                                                    target="_blank"><span>Catalogo</span></a>
+                                            </li>
+                                            <li :class="{ active: $route.path === '/nosotros' }">
+                                                <router-link to="/nosotros"><span>Nosotros</span></router-link>
+                                            </li>
+                                            <li :class="{ active: $route.path === '/blog' }">
+                                                <router-link to="/blog"><span>Blog</span></router-link>
+                                            </li>
+                                            <li :class="{ active: $route.path === '/contacto' }">
                                                 <router-link to="/contacto"><span>Contacto</span></router-link>
-                                                    <!-- <a href="contact.html"><span>Contact</span></a> -->
-                                                </li>
+                                                <!-- <a href="contact.html"><span>Contact</span></a> -->
+                                            </li>
                                             <!-- <li class="menu-item menu-item-has-children">
                                                 <a href="#"><span>Home</span></a>
                                                 <ul class="sub-menu">
@@ -135,7 +151,8 @@
                         </div>
                     </div>
                     <div class="header-bar-mobile side-menu d-lg-none">
-                        <a class="xb-nav-mobile" href="javascript:void(0);"><img src="/img/digital-marketing/icon/menu01.png" alt=""></a>
+                        <a class="xb-nav-mobile" href="javascript:void(0);"><img
+                                src="/img/digital-marketing/icon/menu01.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -153,19 +170,22 @@
                 <nav>
                     <ul>
                         <li :class="{ active: $route.path === '/' }">
-                            <router-link to="/"><span>Inicio</span></router-link>   
+                            <router-link to="/"><span>Inicio</span></router-link>
                         </li>
-                        <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }" class="menu-item menu-item-has-children ">
+                        <li :class="{ active: $route.path.startsWith('/servicios') || $route.path.startsWith('/detalle') }"
+                            class="menu-item menu-item-has-children ">
                             <router-link to=""><span>Servicios</span></router-link>
                             <ul class="sub">
-                                <li v-for ="servicio in servicios" :key="servicio.id" :class="{ active: $route.path === servicio.link }"
-                                ><router-link :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
+                                <li v-for="servicio in servicios" :key="servicio.id"
+                                    :class="{ active: $route.path === servicio.link }"><router-link
+                                        :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
                                 <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
                                 <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
                             </ul>
                         </li>
                         <li :class="{ active: $route.path === '/catalogo' }">
-                            <a href="https://links.entrenandolatinosinroofing.com/catalogo/" target="_blank"><span>Catalogo</span></a>
+                            <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
+                                target="_blank"><span>Catalogo</span></a>
                         </li>
                         <li :class="{ active: $route.path === '/nosotros' }">
                             <router-link to="/nosotros"><span>Nosotros</span></router-link>
@@ -177,11 +197,11 @@
                             <router-link to="/testimonios"><span>Testimonios</span></router-link>
                         </li>
                         <li :class="{ active: $route.path === '/contacto' }">
-                        <router-link to="/contacto"><span>Contacto</span></router-link>
-                            <!-- <a href="contact.html"><span>Contact</span></a> -->    
+                            <router-link to="/contacto"><span>Contacto</span></router-link>
+                            <!-- <a href="contact.html"><span>Contact</span></a> -->
                         </li>
-                    </ul> 
-                </nav> 
+                    </ul>
+                </nav>
             </div>
             <div class="col-xl-4 col-md-5 right-area">
                 <ul>
@@ -191,7 +211,9 @@
                 </ul>
                 <ul>
                     <li><span class="title">Our Office</span></li>
-                    <li><p>72 Oceanview Drive Los Angeles, <br> CA 90045 USA</p></li>
+                    <li>
+                        <p>72 Oceanview Drive Los Angeles, <br> CA 90045 USA</p>
+                    </li>
                 </ul>
                 <ul>
                     <li><span class="title">Follow us</span></li>
@@ -217,10 +239,10 @@ export default {
         return {
             servicios,
         };
-    }, 
+    },
     methods: {
         header() {
-            console.log(servicios); // Servicios importado
+            // console.log(servicios); // Servicios importado
             var headerAnimation = gsap.timeline({ yoyo: false, reversed: true });
             headerAnimation.pause();
 
@@ -266,126 +288,128 @@ export default {
             }
         },
         stickyHeader() {
-		var scrollDirection = "";
-		var lastScrollPosition = 0;
+            var scrollDirection = "";
+            var lastScrollPosition = 0;
 
-		// Clone and make header sticky if the element with class 'xb-header' exists
-		if ($('.xb-header').length) {
-			$('.xb-header').addClass('original').clone(true).insertAfter('.xb-header').addClass('xb-header-area-sticky xb-sticky-stt').removeClass('original');
-		}
+            // Clone and make header sticky if the element with class 'xb-header' exists
+            if ($('.xb-header').length) {
+                $('.xb-header').addClass('original').clone(true).insertAfter('.xb-header').addClass('xb-header-area-sticky xb-sticky-stt').removeClass('original');
+            }
 
-		// Handle scroll events
-		$(window).on("scroll", function () {
-			var currentScrollPosition = $(window).scrollTop();
+            // Handle scroll events
+            $(window).on("scroll", function () {
+                var currentScrollPosition = $(window).scrollTop();
 
-			// Determine scroll direction
-			scrollDirection = currentScrollPosition < lastScrollPosition ? "up" : "down";
-			lastScrollPosition = currentScrollPosition;
+                // Determine scroll direction
+                scrollDirection = currentScrollPosition < lastScrollPosition ? "up" : "down";
+                lastScrollPosition = currentScrollPosition;
 
-			// Check if element with ID 'xb-header-area' has class 'is-sticky'
-			if ($("#xb-header-area").hasClass("is-sticky")) {
-				// Add or remove classes based on scroll position for sticky header and mobile header
-				if (lastScrollPosition > 100) {
-					$(".xb-header-area-sticky.xb-sticky-stb").addClass("xb-header-fixed");
-				} else {
-					$(".xb-header-area-sticky.xb-sticky-stb").removeClass("xb-header-fixed");
-				}
+                // Check if element with ID 'xb-header-area' has class 'is-sticky'
+                if ($("#xb-header-area").hasClass("is-sticky")) {
+                    // Add or remove classes based on scroll position for sticky header and mobile header
+                    if (lastScrollPosition > 100) {
+                        $(".xb-header-area-sticky.xb-sticky-stb").addClass("xb-header-fixed");
+                    } else {
+                        $(".xb-header-area-sticky.xb-sticky-stb").removeClass("xb-header-fixed");
+                    }
 
-				// Add or remove classes for sticky header based on scroll direction
-				if (scrollDirection === "up" && lastScrollPosition > 100) {
-					$(".xb-header-area-sticky.xb-sticky-stt").addClass("xb-header-fixed");
-				} else {
-					$(".xb-header-area-sticky.xb-sticky-stt").removeClass("xb-header-fixed");
-				}
-			}
-		});
-	},
-    
-            },
-            mounted() {
-    this.header();
-    this.stickyHeader();
-    if ($(".progress-bar").length) {
-		var $progress_bar = $('.progress-bar');
-		$progress_bar.appear();
-		$(document.body).on('appear', '.progress-bar', function () {
-			var current_item = $(this);
-			if (!current_item.hasClass('appeared')) {
-				var percent = current_item.data('percent');
-				current_item.css('width', percent + '%').addClass('appeared').parent().append('<span>' + percent + '%' + '</span>');
-			}
+                    // Add or remove classes for sticky header based on scroll direction
+                    if (scrollDirection === "up" && lastScrollPosition > 100) {
+                        $(".xb-header-area-sticky.xb-sticky-stt").addClass("xb-header-fixed");
+                    } else {
+                        $(".xb-header-area-sticky.xb-sticky-stt").removeClass("xb-header-fixed");
+                    }
+                }
+            });
+        },
 
-		});
-	};
-    const parallax = new Ukiyo('.ukiyo', {
-		externalRAF: true,
-		scale: 1.2,
-	});
+    },
+    mounted() {
+        this.header();
+        this.stickyHeader();
+        if ($(".progress-bar").length) {
+            var $progress_bar = $('.progress-bar');
+            $progress_bar.appear();
+            $(document.body).on('appear', '.progress-bar', function () {
+                var current_item = $(this);
+                if (!current_item.hasClass('appeared')) {
+                    var percent = current_item.data('percent');
+                    current_item.css('width', percent + '%').addClass('appeared').parent().append('<span>' + percent + '%' + '</span>');
+                }
 
-	/**
-	 * smooth scroll
-	 */
-	const lenis = new Lenis({
-		duration: .8,
-		smoothWheel: true,
-	});
+            });
+        };
+        const parallax = new Ukiyo('.ukiyo', {
+            externalRAF: true,
+            scale: 1.2,
+        });
 
-    function raf(time) {
-		parallax.animate();
+        /**
+         * smooth scroll
+         */
+        const lenis = new Lenis({
+            duration: .8,
+            smoothWheel: true,
+        });
 
-		lenis.raf(time);
-		requestAnimationFrame(raf);
-	}
-	requestAnimationFrame(raf);
+        function raf(time) {
+            parallax.animate();
 
-    $('.sidebar-menu-close, .body-overlay').on('click', function () {
-		$('.offcanvas-sidebar').removeClass('active');
-		$('.body-overlay').removeClass('active');
-	});
-
-	$('.offcanvas-sidebar-btn').on('click', function () {
-		$('.offcanvas-sidebar').addClass('active');
-		$('.body-overlay').addClass('active');
-	});
-	$('.body-overlay').on('click', function () {
-		$(this).removeClass('active');
-		$(".header-search-form-wrapper").removeClass("open");
-	});
-
-    $('.xb-nav-hidden li.menu-item-has-children > a').append('<span class="xb-menu-toggle"></span>');
-	$('.xb-header-menu li.menu-item-has-children, .xb-menu-primary li.menu-item-has-children').append('<span class="xb-menu-toggle"></span>');
-	$('.xb-menu-toggle').on('click', function () {
-		if (!$(this).hasClass('active')) {
-			$(this).closest('ul').find('.xb-menu-toggle.active').toggleClass('active');
-			$(this).closest('ul').find('.sub-menu.active').toggleClass('active').slideToggle();
-		}
-		$(this).toggleClass('active');
-		$(this).closest('.menu-item').find('> .sub-menu').toggleClass('active');
-		$(this).closest('.menu-item').find('> .sub-menu').slideToggle();
-	});
-
-    $('.xb-nav-hidden li.menu-item-has-children > a').click(function (e) {
-		var target = $(e.target);
-		if ($(this).attr('href') === '#' && !(target.is('.xb-menu-toggle'))) {
-			e.stopPropagation();
-			if (!$(this).find('.xb-menu-toggle').hasClass('active')) {
-				$(this).closest('ul').find('.xb-menu-toggle.active').toggleClass('active');
-				$(this).closest('ul').find('.sub-menu.active').toggleClass('active').slideToggle();
-			}
-			$(this).find('.xb-menu-toggle').toggleClass('active');
-			$(this).closest('.menu-item').find('> .sub-menu').toggleClass('active');
-			$(this).closest('.menu-item').find('> .sub-menu').slideToggle();
-		}
-	});
-	$(".xb-nav-mobile").on('click', function () {
-		$(this).toggleClass('active');
-		$('.xb-header-menu').toggleClass('active');
-	});
-
-	$(".xb-menu-close, .xb-header-menu-backdrop").on('click', function () {
-		$(this).removeClass('active');
-		$('.xb-header-menu').removeClass('active');
-	});
-  },
+            lenis.raf(time);
+            requestAnimationFrame(raf);
         }
+        requestAnimationFrame(raf);
+
+        $('.sidebar-menu-close, .body-overlay').on('click', function () {
+            $('.offcanvas-sidebar').removeClass('active');
+            $('.body-overlay').removeClass('active');
+        });
+
+        $('.offcanvas-sidebar-btn').on('click', function () {
+            $('.offcanvas-sidebar').addClass('active');
+            $('.body-overlay').addClass('active');
+        });
+        $('.body-overlay').on('click', function () {
+            $(this).removeClass('active');
+            $(".header-search-form-wrapper").removeClass("open");
+        });
+
+        $('.xb-nav-hidden li.menu-item-has-children > a').append('<span class="xb-menu-toggle"></span>');
+        console.log('.xb-nav-hidden li.menu-item-has-children > a');
+
+        $('.xb-header-menu li.menu-item-has-children, .xb-menu-primary li.menu-item-has-children').append('<span class="xb-menu-toggle"></span>');
+        $('.xb-menu-toggle').on('click', function () {
+            if (!$(this).hasClass('active')) {
+                $(this).closest('ul').find('.xb-menu-toggle.active').toggleClass('active');
+                $(this).closest('ul').find('.sub-menu.active').toggleClass('active').slideToggle();
+            }
+            $(this).toggleClass('active');
+            $(this).closest('.menu-item').find('> .sub-menu').toggleClass('active');
+            $(this).closest('.menu-item').find('> .sub-menu').slideToggle();
+        });
+
+        $('.xb-nav-hidden li.menu-item-has-children > a').click(function (e) {
+            var target = $(e.target);
+            if ($(this).attr('href') === '#' && !(target.is('.xb-menu-toggle'))) {
+                e.stopPropagation();
+                if (!$(this).find('.xb-menu-toggle').hasClass('active')) {
+                    $(this).closest('ul').find('.xb-menu-toggle.active').toggleClass('active');
+                    $(this).closest('ul').find('.sub-menu.active').toggleClass('active').slideToggle();
+                }
+                $(this).find('.xb-menu-toggle').toggleClass('active');
+                $(this).closest('.menu-item').find('> .sub-menu').toggleClass('active');
+                $(this).closest('.menu-item').find('> .sub-menu').slideToggle();
+            }
+        });
+        $(".xb-nav-mobile").on('click', function () {
+            $(this).toggleClass('active');
+            $('.xb-header-menu').toggleClass('active');
+        });
+
+        $(".xb-menu-close, .xb-header-menu-backdrop").on('click', function () {
+            $(this).removeClass('active');
+            $('.xb-header-menu').removeClass('active');
+        });
+    },
+}
 </script>

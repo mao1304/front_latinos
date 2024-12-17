@@ -45,7 +45,7 @@
 }
 
 body {
-    cursor: url('../components/icons/customCursor.svg') 16 16, auto;
+    /* cursor: url('../components/icons/customCursor.svg') 16 16, auto; */
     /* cursor: none; */
     /* cursor: auto; */
 }

@@ -2,22 +2,16 @@
 const year = new Date().getFullYear();
 </script>
 <template>
-        <footer class="dm-footer pos-rel">
+    <footer class="dm-footer pos-rel">
         <div class="dm-footer-line pt-125 pb-120">
             <div class="container">
                 <div class="row mt-none-40">
-                    <div class="col-lg-4 col-md-6 footer-col mt-40">
+                    <div class="col-lg-3 col-md-6 footer-col mt-40">
                         <div class="footer-widget">
                             <div class="footer-logo mb-30">
-                                <a href="index.html"><img src="/img/logo/logo.svg" alt=""></a>
+                                <RouterLink to="/"><img src="/public/img/reales/logos/logo3.png" class="img-fluid"
+                                        alt=""></RouterLink>
                             </div>
-                            <p>Auxa, creativity knows no limits, and we are <br> committed to bringing your brand's story to life in <br> ways that resonate and endure."</p>
-                            <ul class="social-list ul_li mt-40">
-                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 footer-col mt-40">
@@ -31,7 +25,7 @@ const year = new Date().getFullYear();
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6 footer-col mt-40">
+                    <div class="col-lg-3 col-md-6 footer-col mt-40">
                         <div class="footer-widget">
                             <h3 class="widget-title">MORE INFO</h3>
                             <ul class="footer-links">
@@ -53,29 +47,53 @@ const year = new Date().getFullYear();
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-col mt-40">
+                        <div class="footer-widget">
+                            <div class="footer-logo mb-30">
+                                <h1>Entrenando<br>Latinos</h1>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-col mt-40">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">About US</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-col mt-40">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">MORE INFO</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-col mt-40">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">Newsletter</h3>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="container">
             <div class="footer-copyright text-center">
-                Copyright © {{ year }} <a href="">Entrenando Latinos In Roofing</a><br>
-                Powered by <a href="">Entrenando Latinos In Roofing</a>
+                Copyright © {{ year }} <span>Todos los derechos reservados </span><br>
+                Powered by <span>Entrenando Latinos In Roofing</span>
             </div>
         </div>
         <div class="dm-footer-bg_icon">
             <img src="/img/digital-marketing/icon/dm-footer.png" alt="">
         </div>
     </footer>
-    <!-- footer start -->
 </template>
 
-<script>
-export default {
-  name: 'Footer'
-}
-</script>
-
 <style scoped>
-.footer-copyright a {
-  color: var(--color-primary);
+.footer-copyright span {
+    color: var(--color-primary);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }
 </style>
