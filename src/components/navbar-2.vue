@@ -21,8 +21,6 @@
                                         <li v-for="servicio in servicios" :key="servicio.id"
                                             :class="{ active: $route.path === servicio.link }"><router-link
                                                 :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
-                                        <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
-                                        <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
                                     </ul>
                                 </li>
                                 <li :class="{ active: $route.path === '/catalogo' }">
@@ -46,7 +44,6 @@
                                 </li>
                                 <li :class="{ active: $route.path === '/contacto' }">
                                     <router-link to="/contacto"><span>Contacto</span></router-link>
-                                    <!-- <a href="contact.html"><span>Contact</span></a> -->
                                 </li>
                             </ul>
                         </nav>
@@ -70,8 +67,6 @@
                                                         :class="{ active: $route.path === servicio.link }"><router-link
                                                             :to="servicio.link"><span>{{ servicio.title
                                                                 }}</span></router-link></li>
-                                                    <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
-                                                        <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
                                                 </ul>
                                             </li>
                                             <li :class="{ active: $route.path === '/catalogo' }">
@@ -88,51 +83,6 @@
                                                 <router-link to="/contacto"><span>Contacto</span></router-link>
                                                 <!-- <a href="contact.html"><span>Contact</span></a> -->
                                             </li>
-                                            <!-- <li class="menu-item menu-item-has-children">
-                                                <a href="#"><span>Home</span></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="index.html"><span>Digital Marketing</span></a></li>
-                                                    <li><a href="home-2.html"><span>Branding Studio</span></a></li>
-                                                    <li><a href="home-3.html"><span>Digital Studio</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#"><span>Pages</span></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="about.html"><span>About</span></a></li>
-                                                    <li><a href="service.html"><span>Services</span></a></li>
-                                                    <li><a href="service-single.html"><span>Service Details</span></a></li>
-                                                    <li><a href="team.html"><span>Team</span></a></li>
-                                                    <li><a href="team-single.html"><span>Team Details</span></a></li>
-                                                    <li><a href="career.html"><span>Career</span></a></li>
-                                                    <li><a href="career-single.html"><span>Career Details</span></a></li>
-                                                    <li><a href="faq.html"><span>FAQ</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="portfolio.html"><span>Portfolio</span></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="project.html"><span>Portfolio</span></a></li>
-                                                    <li><a href="project-single.html"><span>Portfolio Details</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="shop.html"><span>Shop</span></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="shop.html"><span>Products</span></a></li>
-                                                    <li><a href="shop-single.html"><span>Single Product</span></a></li>
-                                                    <li><a href="cart.html"><span>Cart</span></a></li>
-                                                    <li><a href="checkout.html"><span>Checkout</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="blog.html"><span>News</span></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="blog.html"><span>News</span></a></li>
-                                                    <li><a href="blog-single.html"><span>News Details</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item"><a href="contact.html"><span>Contact</span></a></li> -->
                                         </ul>
                                     </nav>
                                 </div>
@@ -179,8 +129,6 @@
                                 <li v-for="servicio in servicios" :key="servicio.id"
                                     :class="{ active: $route.path === servicio.link }"><router-link
                                         :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
-                                <!-- <li :class="{ active: $route.path === '/servicio1' }" ><router-link to="/"><span>Servicio 1</span></router-link></li>
-                                <li :class="{ active: $route.path === '/servicio2' }" ><router-link to="/"><span>Servicio 2</span></router-link></li> -->
                             </ul>
                         </li>
                         <li :class="{ active: $route.path === '/catalogo' }">
@@ -253,6 +201,7 @@ export default {
             headerAnimation.from($('.overlay-menu nav li:not(.overlay-menu nav ul li ul li)'), { stagger: 0.1, y: 30, autoAlpha: 0, ease: "Expo.easeInOut" }, 0.5);
             headerAnimation.from($('.overlay-menu nav li:not(.overlay-menu nav ul li ul li)'), { 'clearProps': 'all', delay: 1.3, ease: "Expo.easeInOut" }, 0.5);
             $('header .burger-menu, .overlay-menu .close').on('click', function () {
+                console.log('este ckick activa el menu bonito  ');
                 headerAnimation.reversed() ? headerAnimation.play() : headerAnimation.reverse();
                 $('.overlay-menu').toggleClass('active');
             });
@@ -274,19 +223,44 @@ export default {
 
                 $(".overlay-menu .back, .overlay-menu .close").on('click', function () {
                     overlay_animation.reverse();
+                    console.log("este cierra el menu bonito");
                 });
             });
 
             $(".overlay-menu .menu-item-has-children > a").on('click', function () {
                 this.animation.reversed() ? this.animation.play() : this.animation.reverse();
+                console.log("aqui es donde da click 2");
             });
+
+            //cerrar menu 1
+            const $overlayMenu = $('.overlay-menu');
+            const $navItems = $overlayMenu.find('nav li');
+
+            $navItems.off('click').on('click', function () {
+                headerAnimation.reversed() ? headerAnimation.play() : headerAnimation.reverse();
+                $overlayMenu.removeClass('active');
+                console.log("este es el click en el itme del menu");
+            });
+
+            //hacer un console log cada vez que se hace click en un elemento del menu mobile
+            $('.xb-menu-primary li a').on('click', function () {
+                const menuMobile = document.querySelector('.xb-header-menu');
+                $(this).removeClass('active');
+                console.log('o sera aqi');
+                $('.xb-header-menu').removeClass('active');
+                console.log('este es el click en el itme del menu mobile');
+            })
+
 
             if ($('#fixed').length) {
                 scrollbar.addListener(({ offset }) => {
                     fixed.style.top = offset.y + ($(window).height() - 90) + 'px';
                 });
             }
+
         },
+
+
         stickyHeader() {
             var scrollDirection = "";
             var lastScrollPosition = 0;
@@ -327,6 +301,11 @@ export default {
     mounted() {
         this.header();
         this.stickyHeader();
+        // this.closeMenu();
+        //función para hacer un console log cada vez que se hace click en un elemento del menu
+
+
+
         if ($(".progress-bar").length) {
             var $progress_bar = $('.progress-bar');
             $progress_bar.appear();
@@ -362,16 +341,19 @@ export default {
 
         $('.sidebar-menu-close, .body-overlay').on('click', function () {
             $('.offcanvas-sidebar').removeClass('active');
+            console.log("ffaltaba este 3 ");
             $('.body-overlay').removeClass('active');
         });
 
         $('.offcanvas-sidebar-btn').on('click', function () {
             $('.offcanvas-sidebar').addClass('active');
+            console.log("ffaltaba este 2 ");
             $('.body-overlay').addClass('active');
         });
         $('.body-overlay').on('click', function () {
             $(this).removeClass('active');
             $(".header-search-form-wrapper").removeClass("open");
+            console.log("preuba de click 1 ");
         });
 
         $('.xb-nav-hidden li.menu-item-has-children > a').append('<span class="xb-menu-toggle"></span>');
@@ -379,7 +361,9 @@ export default {
 
         $('.xb-header-menu li.menu-item-has-children, .xb-menu-primary li.menu-item-has-children').append('<span class="xb-menu-toggle"></span>');
         $('.xb-menu-toggle').on('click', function () {
+            console.log("preuba de click 2 ");
             if (!$(this).hasClass('active')) {
+                console.log("preuba de click 2 pero dentro del if ");
                 $(this).closest('ul').find('.xb-menu-toggle.active').toggleClass('active');
                 $(this).closest('ul').find('.sub-menu.active').toggleClass('active').slideToggle();
             }
@@ -389,6 +373,7 @@ export default {
         });
 
         $('.xb-nav-hidden li.menu-item-has-children > a').click(function (e) {
+            console.log("preuba de click 3 ");
             var target = $(e.target);
             if ($(this).attr('href') === '#' && !(target.is('.xb-menu-toggle'))) {
                 e.stopPropagation();
@@ -403,11 +388,13 @@ export default {
         });
         $(".xb-nav-mobile").on('click', function () {
             $(this).toggleClass('active');
+            console.log('o sera veamos aqi');
             $('.xb-header-menu').toggleClass('active');
         });
 
         $(".xb-menu-close, .xb-header-menu-backdrop").on('click', function () {
             $(this).removeClass('active');
+            console.log('o sera aqi');
             $('.xb-header-menu').removeClass('active');
         });
     },

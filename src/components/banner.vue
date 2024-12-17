@@ -7,7 +7,7 @@ import isMobile from '../stores/isMobile.js';
 import { onMounted, ref } from 'vue';
 
 const now = ref(new Date());
-const targetDate = new Date('2025-12-16T10:25:00');
+const targetDate = new Date('2024-12-16T10:25:00');
 
 // Actualiza la fecha actual cada segundo
 setInterval(() => {
@@ -41,7 +41,11 @@ onMounted(() => {
           <span class="line">
             <p style="line-height: 1; margin-bottom:11px; font-weight: bold;">No esperes más para hacer el cambio</p>
             <!-- <h1>a tu vida</h1> -->
-            <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
+            <div style="display: flex; flex-direction: row; gap: 10px">
+              <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
+              <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
+              <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
+            </div>
           </span>
           <div v-if="now < targetDate" class="counter">
             <Timer :target-date="targetDate" />

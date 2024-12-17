@@ -18,7 +18,7 @@
                     y sostenible en los Estados Unidos.</p>
             </div>
             <div class="about-img pos-rel">
-                <img src="/img/about/img02.jpg" alt="">
+                <img src="/img/reales/FOTOGRAFIAS/about.jpg" alt="">
                 <div class="about-year">
                     <!-- <h2 class="xb-odm experience"><NumberCounter :end-value="10" prefix="+" /></h2>
                             <p style="margin-top: 20px;">Year of <br>Experience</p> -->
