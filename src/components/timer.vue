@@ -1,51 +1,60 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-
-interface TimeRemaining {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
+import { useCountdown } from '../stores/timer/timer';
 
 const props = defineProps<{
   targetDate: string;
 }>();
 
-const timeRemaining = ref<TimeRemaining>({
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0,
-});
+const { timeRemaining, calculateTimeRemaining } = useCountdown(props.targetDate);
 
-let timer: number;
+//
+//  interface TimeRemaining {
+//   days: number;
+//   hours: number;
+//   minutes: number;
+//   seconds: number;
+// }
 
-const calculateTimeRemaining = () => {
-  const now = new Date().getTime();
-  const target = new Date(props.targetDate).getTime();
-  const difference = target - now;
+// const props = defineProps<{
+//   targetDate: string;
+// }>();
 
-  if (difference > 0) {
-    timeRemaining.value = {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-      seconds: Math.floor((difference % (1000 * 60)) / 1000),
-    };
-  } else {
-    timeRemaining.value = { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  }
-};
+// const timeRemaining = ref<TimeRemaining>({
+//   days: 0,
+//   hours: 0,
+//   minutes: 0,
+//   seconds: 0,
+// });
 
-onMounted(() => {
-  calculateTimeRemaining();
-  timer = setInterval(calculateTimeRemaining, 1000); 
-});
+// let timer: number;
 
-onUnmounted(() => {
-  clearInterval(timer);
-});
+// const calculateTimeRemaining = () => {
+//   const now = new Date().getTime();
+//   const target = new Date(props.targetDate).getTime();
+//   const difference = target - now;
+
+//   if (difference > 0) {
+//     timeRemaining.value = {
+//       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+//       hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+//       minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+//       seconds: Math.floor((difference % (1000 * 60)) / 1000),
+//     };
+//   } else {
+//     timeRemaining.value = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+//   }
+// };
+
+// onMounted(() => {
+//   calculateTimeRemaining();
+//   timer = setInterval(calculateTimeRemaining, 1000); 
+// });
+
+// onUnmounted(() => {
+//   clearInterval(timer);
+// });
+
 </script>
 
 <template>
@@ -76,6 +85,7 @@ onUnmounted(() => {
   text-transform: uppercase;
   font-size: 40px;
 }
+
 .countdown {
   display: flex;
   /* gap: 2rem; */
@@ -108,10 +118,14 @@ onUnmounted(() => {
   height: 2.5rem;
   font-size: 2.5rem;
   font-weight: bold;
-  background: var(--gradient-primary); /* Gradiente como fondo */
-  -webkit-background-clip: text; /* Usado en WebKit para aplicar el fondo solo al texto */
-  background-clip: text; /* Para otros navegadores */
-  color: transparent; /* Hacemos el texto transparente para que se vea el gradiente */
+  background: var(--gradient-primary);
+  /* Gradiente como fondo */
+  -webkit-background-clip: text;
+  /* Usado en WebKit para aplicar el fondo solo al texto */
+  background-clip: text;
+  /* Para otros navegadores */
+  color: transparent;
+  /* Hacemos el texto transparente para que se vea el gradiente */
 }
 
 .label {
@@ -120,16 +134,15 @@ onUnmounted(() => {
   margin-top: 0.5rem;
 }
 
-  @media (max-width: 460px) {
-    .seconds {
-      display: none;
-    }
+@media (max-width: 460px) {
+  .seconds {
+    display: none;
   }
-
+}
 </style>
 
 <script lang="ts">
- export default {
-   name: 'Timer'
- }
+export default {
+  name: 'Timer'
+}
 </script>

@@ -190,7 +190,6 @@ export default {
     },
     methods: {
         header() {
-            // console.log(servicios); // Servicios importado
             var headerAnimation = gsap.timeline({ yoyo: false, reversed: true });
             headerAnimation.pause();
 
@@ -201,7 +200,6 @@ export default {
             headerAnimation.from($('.overlay-menu nav li:not(.overlay-menu nav ul li ul li)'), { stagger: 0.1, y: 30, autoAlpha: 0, ease: "Expo.easeInOut" }, 0.5);
             headerAnimation.from($('.overlay-menu nav li:not(.overlay-menu nav ul li ul li)'), { 'clearProps': 'all', delay: 1.3, ease: "Expo.easeInOut" }, 0.5);
             $('header .burger-menu, .overlay-menu .close').on('click', function () {
-                console.log('este ckick activa el menu bonito  ');
                 headerAnimation.reversed() ? headerAnimation.play() : headerAnimation.reverse();
                 $('.overlay-menu').toggleClass('active');
             });
@@ -223,13 +221,11 @@ export default {
 
                 $(".overlay-menu .back, .overlay-menu .close").on('click', function () {
                     overlay_animation.reverse();
-                    console.log("este cierra el menu bonito");
                 });
             });
 
             $(".overlay-menu .menu-item-has-children > a").on('click', function () {
                 this.animation.reversed() ? this.animation.play() : this.animation.reverse();
-                console.log("aqui es donde da click 2");
             });
 
             //cerrar menu 1
@@ -239,16 +235,13 @@ export default {
             $navItems.off('click').on('click', function () {
                 headerAnimation.reversed() ? headerAnimation.play() : headerAnimation.reverse();
                 $overlayMenu.removeClass('active');
-                console.log("este es el click en el itme del menu");
             });
 
             //hacer un console log cada vez que se hace click en un elemento del menu mobile
             $('.xb-menu-primary li a').on('click', function () {
                 const menuMobile = document.querySelector('.xb-header-menu');
                 $(this).removeClass('active');
-                console.log('o sera aqi');
                 $('.xb-header-menu').removeClass('active');
-                console.log('este es el click en el itme del menu mobile');
             })
 
 
@@ -341,29 +334,23 @@ export default {
 
         $('.sidebar-menu-close, .body-overlay').on('click', function () {
             $('.offcanvas-sidebar').removeClass('active');
-            console.log("ffaltaba este 3 ");
             $('.body-overlay').removeClass('active');
         });
 
         $('.offcanvas-sidebar-btn').on('click', function () {
             $('.offcanvas-sidebar').addClass('active');
-            console.log("ffaltaba este 2 ");
             $('.body-overlay').addClass('active');
         });
         $('.body-overlay').on('click', function () {
             $(this).removeClass('active');
             $(".header-search-form-wrapper").removeClass("open");
-            console.log("preuba de click 1 ");
         });
 
         $('.xb-nav-hidden li.menu-item-has-children > a').append('<span class="xb-menu-toggle"></span>');
-        console.log('.xb-nav-hidden li.menu-item-has-children > a');
 
         $('.xb-header-menu li.menu-item-has-children, .xb-menu-primary li.menu-item-has-children').append('<span class="xb-menu-toggle"></span>');
         $('.xb-menu-toggle').on('click', function () {
-            console.log("preuba de click 2 ");
             if (!$(this).hasClass('active')) {
-                console.log("preuba de click 2 pero dentro del if ");
                 $(this).closest('ul').find('.xb-menu-toggle.active').toggleClass('active');
                 $(this).closest('ul').find('.sub-menu.active').toggleClass('active').slideToggle();
             }
@@ -373,7 +360,6 @@ export default {
         });
 
         $('.xb-nav-hidden li.menu-item-has-children > a').click(function (e) {
-            console.log("preuba de click 3 ");
             var target = $(e.target);
             if ($(this).attr('href') === '#' && !(target.is('.xb-menu-toggle'))) {
                 e.stopPropagation();
@@ -388,13 +374,11 @@ export default {
         });
         $(".xb-nav-mobile").on('click', function () {
             $(this).toggleClass('active');
-            console.log('o sera veamos aqi');
             $('.xb-header-menu').toggleClass('active');
         });
 
         $(".xb-menu-close, .xb-header-menu-backdrop").on('click', function () {
             $(this).removeClass('active');
-            console.log('o sera aqi');
             $('.xb-header-menu').removeClass('active');
         });
     },

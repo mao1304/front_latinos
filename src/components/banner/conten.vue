@@ -1,51 +1,63 @@
 <template>
-    <div class="banner">
-        <div class="countdown-container">
-            <h1 class="title">COUNTDOWN TO EARTH</h1>
+    <div class="banner" :style="{ backgroundImage: 'url(' + img + ')' }">
+        <span v-if="isBanner" class="sub-title">Entrenando Latinos In Roofing</span>
+        <div v-if="isBanner" class="bottom-info">
+            <h1 class="title">Próximos eventos</h1>
+            <h2>no te quedes fuera</h2>
+        </div>
+        <div v-else class="countdown-container">
+            <h1 class="title">{{ title }}</h1>
             <div class="countdown">
                 <div class="countdown-item">
-                    <span class="number">{{ months }}</span>
-                    <span class="label">MONTHS</span>
+                    <span class="number">{{ timeRemaining.days }}</span>
+                    <span class="label">Dias</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="number">{{ days }}</span>
-                    <span class="label">DAYS</span>
+                    <span class="number">{{ timeRemaining.hours }}</span>
+                    <span class="label">Horas</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="number">{{ hours }}</span>
-                    <span class="label">HOURS</span>
+                    <span class="number">{{ timeRemaining.minutes }}</span>
+                    <span class="label">Minutos</span>
                 </div>
                 <div class="countdown-item">
-                    <span class="number">{{ minutes }}</span>
-                    <span class="label">MINUTES</span>
+                    <span class="number">{{ timeRemaining.seconds }}</span>
+                    <span class="label">Segundos</span>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { useCountdown } from '../../stores/timer/timer';
 import { ref } from 'vue';
+const props = defineProps<{
+    targetDate: string;
+    title: string;
+    isBanner: boolean;
+    img: string;
+}>();
 
-// Estos valores vendrían de tu script de contador existente
-const months = ref('7');
-const days = ref('20');
-const hours = ref('3');
-const minutes = ref('10');
+const { timeRemaining, calculateTimeRemaining } = useCountdown(props.targetDate);
+const title = ref(props.title);
+const img = ref(props.img);
+
 </script>
 
 <style scoped>
 .banner {
     width: 100%;
-    height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80');
-    background-size: cover;
+    height: 80vh;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
     background-position: center;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     overflow: hidden;
+    background-color: rgb(32, 32, 32);
 }
 
 .banner::before {
@@ -55,21 +67,28 @@ const minutes = ref('10');
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .countdown-container {
+    padding: 10px;
     position: relative;
     z-index: 1;
     text-align: center;
     color: white;
+    background: rgba(255, 255, 255, .25);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    min-width: 570px;
 }
 
 .title {
     font-size: 1.5rem;
     letter-spacing: 4px;
-    margin-bottom: 2rem;
-    font-weight: 300;
+    /* margin-bottom: 2rem; */
+    font-weight: bold;
+    color: var(--color-primary);
     text-transform: uppercase;
 }
 
@@ -96,6 +115,7 @@ const minutes = ref('10');
     font-size: 0.875rem;
     letter-spacing: 2px;
     opacity: 0.8;
+    text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -125,5 +145,23 @@ const minutes = ref('10');
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
     }
+}
+
+.sub-title {
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.bottom-info {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
 }
 </style>

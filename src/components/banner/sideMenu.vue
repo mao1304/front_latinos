@@ -2,30 +2,8 @@
     <div class="menu-flotante" :class="{ 'expandido': menuExpandido }" @click="toggleMenu">
         <div class="eventos-slider" ref="sliderRef">
             <div class="swiper-wrapper">
-                <div v-for="evento in eventos" :key="evento.id" class="swiper-slide banner">
-                    <div class="countdown-container">
-                        <h1 class="title">COUNTDOWN TO EARTH</h1>
-                        <timer />
-                        <div class="countdown">
-                            <div class="countdown-item">
-                                <span class="number">{{ months }}</span>
-                                <span class="label">MONTHS</span>
-                            </div>
-                            <div class="countdown-item">
-                                <span class="number">{{ days }}</span>
-                                <span class="label">DAYS</span>
-                            </div>
-                            <div class="countdown-item">
-                                <span class="number">{{ hours }}</span>
-                                <span class="label">HOURS</span>
-                            </div>
-                            <div class="countdown-item">
-                                <span class="number">{{ minutes }}</span>
-                                <span class="label">MINUTES</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <conten v-for="evento in eventos" :target-date="evento.date" :title="evento.titulo" :img="evento.img"
+                    :isBanner="evento.is_banner" class="swiper-slide banner" />
             </div>
         </div>
     </div>
@@ -36,16 +14,15 @@
                                 <p>{{ evento.descripcion }}</p>
                                 <p>{{ evento.date }}</p>
                             </div> -->
-<script setup>
+<script setup lang="ts">
+
+import conten from './conten.vue'
 import { ref, onMounted } from "vue";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
-import timeRemaining from "../timer.vue";
-console.log(timeRemaining.value);
+
 const sliderRef = ref(null);
-console.log(sliderRef.value);
 onMounted(() => {
-    console.log(sliderRef.value);
     new Swiper(sliderRef.value, {
         spaceBetween: 0,
         slidesPerView: 1,
@@ -53,7 +30,7 @@ onMounted(() => {
         loop: true,
         autoplay: {
             enabled: true,
-            delay: 4000,
+            delay: 8000,
         },
         speed: 400,
         breakpoints: {
@@ -69,28 +46,24 @@ onMounted(() => {
 
 const menuExpandido = ref(false);
 const eventos = ref([
-    { titulo: 'Evento 1', descripcion: 'Descripción del evento 1', date: 'Fecha del evento 1', img: '/img/reales/FOTOGRAFIAS/about.jpg' },
-    { titulo: 'Evento 2', descripcion: 'Descripción del evento 2', date: 'Fecha del evento 1', img: '/img/reales/FOTOGRAFIAS/about-1.jpg' },
-    { titulo: 'Evento 3', descripcion: 'Descripción del evento 3', date: 'Fecha del evento 1', img: '/img/reales/FOTOGRAFIAS/about-2.jpg' },
+    { id: 0, titulo: 'Proximos eventos', descripcion: 'Descripción del evento 1', date: '2024-12-21T10:25:00', img: "/img/reales/FOTOGRAFIAS/luis-velasquez.png", is_banner: true },
+    { id: 1, titulo: 'Taller de conocimiento', descripcion: 'Descripción del evento 1', date: '2024-12-21T10:25:00', img: "/img/reales/FOTOGRAFIAS/about.jpg", is_banner: false },
+    { id: 2, titulo: 'Entrenamiento 39', descripcion: 'Descripción del evento 2', date: '2025-01-31T08:00:00', img: "/img/reales/FOTOGRAFIAS/about-1.jpg", is_banner: false },
+    { id: 3, titulo: 'Premios Entrenando Latinos 2024', descripcion: 'Descripción del evento 3', date: '2025-02-01T18:00:00', img: "/img/reales/FOTOGRAFIAS/about-2.jpg", is_banner: false },
 ]);
 
 const toggleMenu = () => {
     menuExpandido.value = !menuExpandido.value;
 };
-const months = ref('7');
-const days = ref('20');
-const hours = ref('3');
-const minutes = ref('10');
 </script>
-
 <style scoped>
 .menu-flotante {
     position: fixed;
-    left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     background-color: #f0f0f0;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px 0 0 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     overflow: hidden;
@@ -107,11 +80,14 @@ const minutes = ref('10');
     width: 50vw;
     height: auto;
 }
+</style>
+<!-- <style scoped>
+
 
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80');
+    /* background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80'); */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -199,4 +175,4 @@ const minutes = ref('10');
         margin-bottom: 1.5rem;
     }
 }
-</style>
+</style> -->
