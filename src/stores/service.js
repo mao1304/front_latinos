@@ -12,7 +12,7 @@ const services = [
         title: "Capacitación personalizada",
         description: "Optimiza el éxito de tu compañía.",
         img: "/img/reales/FOTOGRAFIAS/capacitacion.jpg",
-        link: "/detalle-servicio-Capacitación",
+        link: "/detalle-servicio-Capacitacion",
     },
     {
         id: 3,

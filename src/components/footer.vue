@@ -27,12 +27,17 @@ const year = new Date().getFullYear();
                     </div>
                     <div class="col-lg-3 col-md-6 footer-col mt-40">
                         <div class="footer-widget">
-                            <h3 class="widget-title">MORE INFO</h3>
+                            <h3 class="widget-title">Mas información</h3>
                             <ul class="footer-links">
-                                <li><a href="#!">Career</a></li>
-                                <li><a href="#!">Team</a></li>
-                                <li><a href="#!">Services</a></li>
-                                <li><a href="#!">Portfolio</a></li>
+                                <li>
+                                    <RouterLink to="/nosotros">Nosotros</RouterLink>
+                                </li>
+                                <li><a href="https://links.entrenandolatinosinroofing.com/#aeropuertos_cercanos"
+                                        target="_blank">Donde
+                                        encontrarnos</a></li>
+                                <li>
+                                    <RouterLink to="/contacto">Contacto</RouterLink>
+                                </li>
                             </ul>
                         </div>
                     </div>

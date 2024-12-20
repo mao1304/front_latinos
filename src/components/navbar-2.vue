@@ -76,15 +76,27 @@
                                                 <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
                                                     target="_blank"><span>Catalogo</span></a>
                                             </li>
-                                            <li :class="{ active: $route.path === '/nosotros' }">
-                                                <router-link to="/nosotros"><span>Nosotros</span></router-link>
+                                            <li :class="{ active: $route.path.startsWith('/nosotros') || $route.path.startsWith('/contacto') }"
+                                                class="menu-item menu-item-has-children ">
+                                                <router-link to=""><span>nosotros</span></router-link>
+                                                <ul class="sub-menu">
+                                                    <li :class="{ active: $route.path === '/contacto' }">
+                                                        <router-link to="/contacto"><span>Contacto</span></router-link>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://links.entrenandolatinosinroofing.com/#aeropuertos_cercanos"
+                                                            target="_blank"><span>Donde encontrarnos</span></a>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li :class="{ active: $route.path === '/blog' }">
-                                                <router-link to="/blog"><span>Blog</span></router-link>
-                                            </li>
-                                            <li :class="{ active: $route.path === '/contacto' }">
-                                                <router-link to="/contacto"><span>Contacto</span></router-link>
-                                                <!-- <a href="contact.html"><span>Contact</span></a> -->
+                                            <li :class="{ active: $route.path === '/testimonios' }"
+                                                class="menu-item menu-item-has-children ">
+                                                <router-link to="/testimonios"><span>Experiencias</span></router-link>
+                                                <ul class="sub-menu">
+                                                    <li :class="{ active: $route.path === '/blog' }">
+                                                        <router-link to="/blog"><span>Blog</span></router-link>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </nav>
@@ -113,7 +125,7 @@
     </header>
     <!-- header end -->
 
-    <!-- overlay menu start -->
+    <!-- menu lateral con detalles -->
     <div class="overlay-menu">
         <div class="close">
             <div class="xb-close"></div>
@@ -138,32 +150,50 @@
                             <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
                                 target="_blank"><span>Catalogo</span></a>
                         </li>
-                        <li :class="{ active: $route.path === '/nosotros' }">
-                            <router-link to="/nosotros"><span>Nosotros</span></router-link>
+                        <li :class="{ active: $route.path.startsWith('/nosotros') || $route.path.startsWith('/contacto') }"
+                            class="menu-item menu-item-has-children ">
+                            <router-link to="/nosotros"><span>nosotros</span></router-link>
+                            <ul class="sub">
+                                <li :class="{ active: $route.path === '/contacto' }">
+                                    <router-link href="/contacto"><span>Contacto</span></router-link>
+                                </li>
+                                <li>
+                                    <a href="https://links.entrenandolatinosinroofing.com/#aeropuertos_cercanos"
+                                        target="_blank"><span>Donde encontrarnos</span></a>
+                                </li>
+                            </ul>
                         </li>
-                        <li :class="{ active: $route.path === '/blog' }">
-                            <router-link to="/blog"><span>Blog</span></router-link>
+                        <li :class="{ active: $route.path === '/testimonios' }"
+                            class="menu-item menu-item-has-children ">
+                            <router-link to="/testimonios"><span>Experiencias</span></router-link>
+                            <ul class="sub">
+                                <li :class="{ active: $route.path === '/blog' }">
+                                    <router-link to="/blog"><span>Blog</span></router-link>
+                                </li>
+                            </ul>
                         </li>
-                        <li :class="{ active: $route.path === '/testimonios' }">
-                            <router-link to="/testimonios"><span>Testimonios</span></router-link>
-                        </li>
-                        <li :class="{ active: $route.path === '/contacto' }">
-                            <router-link to="/contacto"><span>Contacto</span></router-link>
-                            <!-- <a href="contact.html"><span>Contact</span></a> -->
-                        </li>
+
+
                     </ul>
                 </nav>
             </div>
             <div class="col-xl-4 col-md-5 right-area">
                 <ul>
-                    <li><span class="title">Brief us</span></li>
-                    <li><a href="mailto:hello@auxa.com" target="_blank">hello@auxa.com</a></li>
-                    <li><a href="tel:53325356623" target="_blank">Tel. +53 325 356 623</a></li>
+                    <li><span class="title">Póngase en contacto con nosotros en</span></li>
+                    <li v-for="contactDetail in contactDetails"><a :href="contactDetail.link" target="_blank">{{
+                        contactDetail.value }}</a></li>
                 </ul>
                 <ul>
-                    <li><span class="title">Our Office</span></li>
+                    <li><span class="title">Nuestra Oficina </span></li>
                     <li>
-                        <p>{{ location }}</p>
+                        <p>{{ Ubicacion }}</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li><span class="title">Horario de Atención</span></li>
+                    <li>
+                        <p>{{ Horario }}</p>
+                        <p>{{ Horario2 }}</p>
                     </li>
                 </ul>
                 <ul>
@@ -184,15 +214,22 @@
 
 <script>
 import servicios from '@/stores/service.js'
-import { socialLinks, location, contactDetails } from '@/stores/contact/contactinfo';
+import { socialLinks, location, contactDetails, schedule } from '@/stores/contact/contactinfo';
+import { RouterLink } from 'vue-router';
+import router from '@/routes/router';
+const Ubicacion = location[0];
+const Horario = schedule[0];
+const Horario2 = schedule[1];
 export default {
     name: 'Navbar',
     data() {
         return {
             servicios,
             socialLinks,
-            location,
+            Ubicacion,
             contactDetails,
+            Horario,
+            Horario2,
         };
     },
     methods: {
@@ -238,8 +275,14 @@ export default {
             //cerrar menu 1
             const $overlayMenu = $('.overlay-menu');
             const $navItems = $overlayMenu.find('nav li');
+            const $navItems2 = $overlayMenu.find('nav li ul li a');
 
             $navItems.off('click').on('click', function () {
+                headerAnimation.reversed() ? headerAnimation.play() : headerAnimation.reverse();
+                $overlayMenu.removeClass('active');
+            });
+
+            $navItems2.off('click').on('click', function () {
                 headerAnimation.reversed() ? headerAnimation.play() : headerAnimation.reverse();
                 $overlayMenu.removeClass('active');
             });
@@ -393,6 +436,6 @@ export default {
 </script>
 <style scoped>
 li.active a span {
-    color: var(--color-primary) !important;
+    color: var(--color-primary);
 }
 </style>

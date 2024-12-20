@@ -73,7 +73,7 @@
                 </span>
             </div>
             <div class="dm-about--button xb-element-parallax">
-                <a href="about.html" class="circle-btn port-btn about-btn dm-btn">
+                <a href="/nosotros" class="circle-btn port-btn about-btn dm-btn">
                     <div class="button__bg"></div>Explore <br> more
                 </a>
             </div>
