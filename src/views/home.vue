@@ -6,6 +6,7 @@ import Price from '../components/price.vue';
 import Menbrecia from '@/components/menbrecia.vue';
 import About from '../components/about.vue';
 import Videos from '@/components/videos.vue';
+import brands from '@/components/brands.vue';
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import Videos from '@/components/videos.vue';
     <Menbrecia />
     <About />
     <Videos />
+    <brands />
   </div>
 </template>

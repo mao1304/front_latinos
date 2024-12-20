@@ -32,8 +32,8 @@ onMounted(() => {
 
 <template>
   <main>
-    <brands />
-    <section class="service-4 pos-rel mb-130" style="overflow-x: hidden; ">
+    <!-- <brands /> -->
+    <section class="service-4 pos-rel mt-180 mb-130" style="overflow-x: hidden; ">
       <div class="container">
         <div class="section-title section-title--dm mb-55">
           <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">SERVICIOS</span>

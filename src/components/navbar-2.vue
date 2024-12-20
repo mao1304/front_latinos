@@ -5,8 +5,8 @@
             <div class="container mxw_1785">
                 <div class="header__wrap ul_li_between">
                     <div class="header-logo">
-                        <router-link to="/"><img src="/img/reales/logo-blanco-entrenado-latinos.png" alt=""
-                                style="height: 90px; padding: 10px 10px 0;"></router-link>
+                        <router-link to="/"><img src="/img/reales/logos/logo2.png" alt=""
+                                style="height: 80px; width: auto; padding: 10px 10px 0;"></router-link>
                     </div>
                     <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                         <nav class="main-menu collapse navbar-collapse">
@@ -27,24 +27,39 @@
                                     <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
                                         target="_blank"><span>Catalogo</span></a>
                                 </li>
-                                <li :class="{ active: $route.path === '/nosotros' }">
+                                <li :class="{ active: $route.path === '/nosotros' || $route.path === '/contacto' }"
+                                    class="menu-item-has-children ">
                                     <router-link to="/nosotros"><span>Nosotros</span></router-link>
+                                    <ul class="submenu">
+                                        <li :class="{ active: $route.path === '/contacto' }"><router-link
+                                                to="/contacto"><span>Contacto</span></router-link>
+                                        </li>
+                                        <li><a href="https://links.entrenandolatinosinroofing.com/#aeropuertos_cercanos"
+                                                target="_blank"><span>Donde encontrarnos</span></a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li :class="{ active: $route.path === '/blog' }">
-                                    <router-link to="/blog"><span>Blog</span></router-link>
-                                </li>
-                                <li :class="{ active: $route.path === '/testimonios' }" class="menu-item-has-children ">
+
+                                <li :class="{ active: $route.path === '/testimonios' || $route.path === '/blog' }"
+                                    class="menu-item-has-children ">
                                     <router-link to="/testimonios"><span>Experiencias</span></router-link>
+                                    <ul class="submenu">
+                                        <li :class="{ active: $route.path === '/blog' }"> <router-link
+                                                to="/blog"><span>Blog</span></router-link></li>
+                                    </ul>
+                                </li>
+                                <!-- <li :class="{ active: $route.path === '/blog' }">
+                                </li> -->
+                                <!-- <li :class="{ active: $route.path === '/contacto' }" class="menu-item-has-children ">
+                                    <router-link to=""><span>contacto</span></router-link>
+
                                     <ul class="submenu">
                                         <li><router-link to="/testimonios"><span>Experiencias v1</span></router-link>
                                         </li>
                                         <li><router-link to="/testimonios-2"><span>Experiencias v2</span></router-link>
                                         </li>
                                     </ul>
-                                </li>
-                                <li :class="{ active: $route.path === '/contacto' }">
-                                    <router-link to="/contacto"><span>Contacto</span></router-link>
-                                </li>
+                                </li> -->
                             </ul>
                         </nav>
                         <div class="xb-header-wrap">
@@ -102,7 +117,7 @@
                     </div>
                     <div class="header-bar-mobile side-menu d-lg-none">
                         <a class="xb-nav-mobile" href="javascript:void(0);"><img
-                                src="/img/digital-marketing/icon/menu01.png" alt=""></a>
+                                src="/img/digital-marketing/icon/menu01.png" alt="icono-menu"></a>
                     </div>
                 </div>
             </div>

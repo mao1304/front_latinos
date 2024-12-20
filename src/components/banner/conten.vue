@@ -1,9 +1,18 @@
 <template>
     <div class="banner" :style="{ backgroundImage: 'url(' + img + ')' }">
-        <span v-if="isBanner" class="sub-title">Entrenando Latinos In Roofing</span>
-        <div v-if="isBanner" class="bottom-info">
-            <h1 class="title">Próximos eventos</h1>
-            <h2>no te quedes fuera</h2>
+        <div v-if="isBanner" class="banner">
+            <img src="/img/reales/eventos/bannerBG.png" alt=""
+                style=" position: absolute; top: 0; padding: 10px 10px; max-width: 80%;">
+            <span class="sub-title">Entrenando Latinos In Roofing</span>
+            <div
+                style="display: flex; justify-content: center; align-items: center; width: 100%;  height: 100%; z-index: 1;">
+                <img :src="img" alt="" class="img-banner">
+            </div>
+            <div class="bottom-info">
+                <h1 class="title">Próximos eventos</h1>
+                <h2 class="subtitle">no te quedes fuera</h2>
+                <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Inscripciones aquí</a>
+            </div>
         </div>
         <div v-else class="countdown-container">
             <h1 class="title">{{ title }}</h1>
@@ -31,7 +40,8 @@
 
 <script setup lang="ts">
 import { useCountdown } from '../../stores/timer/timer';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import isMobile from '../../stores/isMobile.js';
 const props = defineProps<{
     targetDate: string;
     title: string;
@@ -43,21 +53,47 @@ const { timeRemaining, calculateTimeRemaining } = useCountdown(props.targetDate)
 const title = ref(props.title);
 const img = ref(props.img);
 
+onMounted(() => {
+    if (isMobile()) {
+        //     const container = document.querySelectorAll('.countdown-container');
+        const banner = document.querySelectorAll('.banner');
+        //     const bannerContent = document.querySelector('.bottom-info');
+
+        //     (bannerContent as HTMLElement).style.marginBottom = '60px';
+
+        //     container.forEach(element => {
+        //         (element as HTMLElement).style.marginBottom = '60px';
+        //     });
+
+        banner.forEach(element => {
+            (element as HTMLElement).style.height = 'calc(100vh - 60px)';
+        })
+        console.log('isMobile');
+    }
+})
 </script>
 
 <style scoped>
 .banner {
     width: 100%;
-    height: 80vh;
+    height: 95vh;
     /* background-size: cover; */
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: end;
     overflow: hidden;
     background-color: rgb(32, 32, 32);
+}
+
+@media screen and (max-width: 596px) {
+
+    .banner {
+        height: 100vh;
+
+    }
 }
 
 .banner::before {
@@ -68,6 +104,24 @@ const img = ref(props.img);
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
+}
+
+.button-banner {
+    background: var(--color-primary);
+    border-radius: 10px;
+    padding: 12px 26px;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Bebas Neue", sans-serif;
+    line-height: 1;
+    letter-spacing: 4px;
+    font-size: 22px;
+    margin: 0;
+    position: relative;
+    bottom: 20px;
+}
+
+.subtitle {
+    margin: 0 0 40px;
 }
 
 .countdown-container {
@@ -87,6 +141,7 @@ const img = ref(props.img);
     font-size: 1.5rem;
     letter-spacing: 4px;
     /* margin-bottom: 2rem; */
+    width: 100%;
     font-weight: bold;
     color: var(--color-primary);
     text-transform: uppercase;
@@ -109,6 +164,23 @@ const img = ref(props.img);
     font-weight: 300;
     line-height: 1;
     margin-bottom: 0.5rem;
+}
+
+.img-banner {
+    /* top: 0;
+    left: 0;
+    max-width: 50%; */
+    position: absolute;
+    height: 95%;
+    bottom: 0;
+}
+
+
+@media screen and (max-width: 830px) {
+    .img-banner {
+        height: 85%;
+    }
+
 }
 
 .label {
@@ -143,12 +215,13 @@ const img = ref(props.img);
 
     .title {
         font-size: 1.2rem;
-        margin-bottom: 1.5rem;
+        /* margin-bottom: 1.5rem; */
     }
 }
 
 .sub-title {
-    padding-top: 10px;
+    z-index: 2;
+    padding: 40px 20px 0;
     position: absolute;
     top: 0;
     font-size: 1.5rem;
@@ -156,6 +229,7 @@ const img = ref(props.img);
     font-weight: bold;
     color: var(--color-primary);
     text-transform: uppercase;
+    text-align: center;
 }
 
 .bottom-info {
@@ -163,5 +237,6 @@ const img = ref(props.img);
     position: absolute;
     bottom: 0;
     margin-bottom: 10px;
+    z-index: 2;
 }
 </style>

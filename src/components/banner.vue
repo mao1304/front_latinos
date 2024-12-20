@@ -41,11 +41,11 @@ onMounted(() => {
           <span class="line">
             <p style="line-height: 1; margin-bottom:11px; font-weight: bold;">No esperes más para hacer el cambio</p>
             <!-- <h1>a tu vida</h1> -->
-            <div style="display: flex; flex-direction: row; gap: 10px">
+            <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
+            <!-- <div style="display: flex; flex-direction: row; gap: 10px">
               <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
               <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
-              <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Conoce como</a>
-            </div>
+            </div> -->
           </span>
           <div v-if="now < targetDate" class="counter">
             <Timer :target-date="targetDate" />

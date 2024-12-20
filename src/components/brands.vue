@@ -28,8 +28,8 @@
                     </div>
                     <div class="swiper-slide dm-brand">
                         <br>
-                        <a href="https://www.e-c-o-supply.com/" target="_blank"><img
-                                src="https://www.e-c-o-supply.com/wp-content/uploads/2024/06/cropped-logoECOSUPPLY-1-2.png"
+                        <a href="https://ecosupplyllc.com/" target="_blank"><img
+                                src="https://ecosupplyllc.com/static/app_core/images/logo_white_3.webp"
                                 alt="EcoSupply New Jersey LLC" class="image"></a><br>
                     </div>
                     <div class="swiper-slide dm-brand">

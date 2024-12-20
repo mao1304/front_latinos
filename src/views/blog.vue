@@ -3,7 +3,7 @@ import BannerSections from '../components/banner-sections.vue';
 import blog from '../stores/blogs.js';
 import SideBarBlog from '../components/sideBarBlog.vue';
 import { ref, computed } from 'vue';
-
+import brands from '@/components/brands.vue';
 // Estado para la paginación
 const currentPage = ref(1);
 const itemsPerPage = 2;
@@ -124,6 +124,7 @@ const prevPage = () => {
             </div>
         </section>
     </di>
+    <brands />
 </template>
 
 <style scoped>

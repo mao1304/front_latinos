@@ -34,7 +34,7 @@ function selectVideo(index) {
                 <div class="col-12 col-lg-8  video-container">
                     <div class="video-wrapper">
                         <transition name="fade" mode="out-in">
-                            <iframe :key="videos[selectedKey].id" width="100%" height="600px"
+                            <iframe :key="videos[selectedKey].id" class="video-iframe"
                                 :src="`https://www.youtube.com/embed/${videos[selectedKey].link}`"
                                 :title="`Video testimonial - ${videos[selectedKey].title}`" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -97,7 +97,7 @@ function selectVideo(index) {
 .video-wrapper {
     width: 100%;
     background: #000;
-    height: 600px;
+    height: 500px;
     /* overflow-y: scroll;
     scroll-behavior: smooth;
     overscroll-behavior: contain; */
@@ -107,20 +107,39 @@ function selectVideo(index) {
 /* Contenedor de la lista de videos */
 .video-list-wrapper {
     width: 100%;
-    height: 600px;
+    height: 500px;
     background: #f5f5f5;
     border-radius: 8px;
 
 
 }
 
+.video-iframe {
+    width: 100%;
+    height: 500px;
+}
+
 .video-list {
     padding: 10px;
     width: 100%;
-    height: 600px;
+    height: 500px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     overscroll-behavior: contain;
+}
+
+@media screen and (max-width: 992px) {
+    .video-iframe {
+        height: 400px;
+    }
+
+    .video-list-wrapper {
+        height: 400px;
+    }
+
+    .video-wrapper {
+        height: 400px;
+    }
 }
 
 
@@ -184,7 +203,7 @@ function selectVideo(index) {
 
 .thumbnail-image {
     width: 100%;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }

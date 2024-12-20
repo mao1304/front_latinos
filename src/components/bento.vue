@@ -109,8 +109,7 @@
 
       <a href="https://ecosupplyllc.com/" class="card pos-3" target="_blank">
         <div class="img-container">
-          <img src="https://www.e-c-o-supply.com/wp-content/uploads/2024/06/cropped-logoECOSUPPLY-1-2.png"
-            alt="Eco Supply">
+          <img src="https://ecosupplyllc.com/static/app_core/images/logo_white_3.webp" alt="Eco Supply">
 
         </div>
       </a>
@@ -357,7 +356,6 @@ import whatsappIcon from './icons/whatsappIcon.vue';
   background-color: #FFF8E7;
   gap: 16px;
   grid-template-rows: 1fr 1fr;
-  /* grid-row: span 1; */
   text-align: center;
 }
 
@@ -398,7 +396,7 @@ import whatsappIcon from './icons/whatsappIcon.vue';
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: 'Bebas Neue';
+  font-family: 'Gotham';
   /* margin-bottom: 1rem; */
 }
 
