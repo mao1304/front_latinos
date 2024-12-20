@@ -48,18 +48,6 @@
                                                 to="/blog"><span>Blog</span></router-link></li>
                                     </ul>
                                 </li>
-                                <!-- <li :class="{ active: $route.path === '/blog' }">
-                                </li> -->
-                                <!-- <li :class="{ active: $route.path === '/contacto' }" class="menu-item-has-children ">
-                                    <router-link to=""><span>contacto</span></router-link>
-
-                                    <ul class="submenu">
-                                        <li><router-link to="/testimonios"><span>Experiencias v1</span></router-link>
-                                        </li>
-                                        <li><router-link to="/testimonios-2"><span>Experiencias v2</span></router-link>
-                                        </li>
-                                    </ul>
-                                </li> -->
                             </ul>
                         </nav>
                         <div class="xb-header-wrap">
@@ -67,7 +55,7 @@
                                 <div class="xb-header-menu-scroll">
                                     <div class="xb-menu-close xb-hide-xl xb-close"></div>
                                     <div class="xb-logo-mobile xb-hide-xl">
-                                        <router-link to="/"><img src="/img/logo/logo.svg" alt=""></router-link>
+                                        <router-link to="/"><img src="/img/reales/logos/logo2.png" alt=""></router-link>
                                     </div>
                                     <nav class="xb-header-nav">
                                         <ul class="xb-menu-primary clearfix">
@@ -175,16 +163,16 @@
                 <ul>
                     <li><span class="title">Our Office</span></li>
                     <li>
-                        <p>72 Oceanview Drive Los Angeles, <br> CA 90045 USA</p>
+                        <p>{{ location }}</p>
                     </li>
                 </ul>
                 <ul>
-                    <li><span class="title">Follow us</span></li>
+                    <li><span class="title">Síguenos</span></li>
                     <li>
                         <ul class="social-links">
-                            <li><a href="#" target="_blank">Behance</a></li>
-                            <li><a href="#" target="_blank">Dribbble</a></li>
-                            <li><a href="#" target="_blank">Instagram</a></li>
+                            <li v-for="socialLink in socialLinks"><a :href="socialLink.link" target="_blank">{{
+                                socialLink.label }}</a></li>
+
                         </ul>
                     </li>
                 </ul>
@@ -196,11 +184,15 @@
 
 <script>
 import servicios from '@/stores/service.js'
+import { socialLinks, location, contactDetails } from '@/stores/contact/contactinfo';
 export default {
     name: 'Navbar',
     data() {
         return {
             servicios,
+            socialLinks,
+            location,
+            contactDetails,
         };
     },
     methods: {
@@ -399,3 +391,8 @@ export default {
     },
 }
 </script>
+<style scoped>
+li.active a span {
+    color: var(--color-primary) !important;
+}
+</style>

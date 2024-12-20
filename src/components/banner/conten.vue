@@ -1,5 +1,5 @@
 <template>
-    <div class="banner" :style="{ backgroundImage: 'url(' + img + ')' }">
+    <div class="banner" :style="{ backgroundImage: 'url(' + getImage() + ')' }">
         <div v-if="isBanner" class="banner">
             <img src="/img/reales/eventos/bannerBG.png" alt=""
                 style=" position: absolute; top: 0; padding: 10px 10px; max-width: 80%;">
@@ -8,7 +8,7 @@
                 style="display: flex; justify-content: center; align-items: center; width: 100%;  height: 100%; z-index: 1;">
                 <img :src="img" alt="" class="img-banner">
             </div>
-            <div class="bottom-info">
+            <div class="bottom-info countdown-container">
                 <h1 class="title">Próximos eventos</h1>
                 <h2 class="subtitle">no te quedes fuera</h2>
                 <a class="button-banner" href="https://links.entrenandolatinosinroofing.com/">Inscripciones aquí</a>
@@ -47,11 +47,13 @@ const props = defineProps<{
     title: string;
     isBanner: boolean;
     img: string;
+    imgMobile: string;
 }>();
 
 const { timeRemaining, calculateTimeRemaining } = useCountdown(props.targetDate);
 const title = ref(props.title);
 const img = ref(props.img);
+const imgMobile = ref(props.imgMobile);
 
 onMounted(() => {
     if (isMobile()) {
@@ -71,13 +73,19 @@ onMounted(() => {
         console.log('isMobile');
     }
 })
+
+const mobileImg = ref(window.innerWidth <= 600);
+
+function getImage() {
+    return mobileImg.value ? imgMobile.value : img.value;
+}
 </script>
 
 <style scoped>
 .banner {
     width: 100%;
     height: 95vh;
-    /* background-size: cover; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     /* position: relative; */
@@ -88,10 +96,19 @@ onMounted(() => {
     background-color: rgb(32, 32, 32);
 }
 
-@media screen and (max-width: 596px) {
+@media screen and (max-width: 900px) {
+
+    .banner {
+        background-size: contain;
+    }
+}
+
+@media screen and (max-width: 600px) {
 
     .banner {
         height: 100vh;
+        background-size: cover;
+
 
     }
 }
@@ -130,11 +147,17 @@ onMounted(() => {
     z-index: 1;
     text-align: center;
     color: white;
-    background: rgba(255, 255, 255, .25);
+    background: rgba(23, 32, 42, .25);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border: 1.5px solid rgba(209, 213, 219, 0.3);
     min-width: 570px;
+}
+
+@media screen and (max-width: 600px) {
+    .countdown-container {
+        min-width: 100%;
+    }
 }
 
 .title {

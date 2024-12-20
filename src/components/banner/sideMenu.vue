@@ -14,8 +14,8 @@
                 </svg></button>
             <div class="swiper-wrapper">
                 <conten v-for="evento in eventos" :target-date="evento.date" :title="evento.titulo" :img="evento.img"
-                    :isBanner="evento.is_banner" class="swiper-slide banner" data-swiper-autoplay="8000"
-                    loading="lazy" />
+                    :imgMobile="evento.imgMobile" :isBanner="evento.is_banner" class="swiper-slide banner"
+                    data-swiper-autoplay="8000" loading="lazy" />
             </div>
         </div>
     </div>
@@ -54,10 +54,10 @@ onMounted(() => {
 
 const menuExpandido = ref(false);
 const eventos = ref([
-    { id: 0, titulo: 'Proximos eventos', descripcion: 'Descripción del evento 1', date: '2024-12-21T10:25:00', img: "/img/reales/eventos/banner.png", img_mobile: "/img/reales/FOTOGRAFIAS/luis-velasquez.png", is_banner: true },
-    { id: 1, titulo: 'Taller de conocimiento', descripcion: 'Descripción del evento 1', date: '2024-12-21T10:25:00', img: "/img/reales/eventos/taller.jpg", img_mobile: "/img/reales/FOTOGRAFIAS/about.jpg", is_banner: false },
-    { id: 2, titulo: 'Entrenamiento 39', descripcion: 'Descripción del evento 2', date: '2025-01-31T08:00:00', img: "/img/reales/eventos/30-31.jpg", is_banner: false },
-    { id: 3, titulo: 'Premios Entrenando Latinos 2024', descripcion: 'Descripción del evento 3', date: '2025-02-01T18:00:00', img: "/img/reales/eventos/premiosweb.webp", is_banner: false },
+    { id: 0, titulo: 'Proximos eventos', descripcion: 'Descripción del evento 1', date: '2024-12-21T10:25:00', img: "/img/reales/eventos/banner.png", imgMobile: "/img", is_banner: true },
+    { id: 1, titulo: 'Taller de conocimiento', descripcion: 'Descripción del evento 1', date: '2024-12-21T10:25:00', img: "/img/reales/eventos/taller.jpg", imgMobile: "/img/reales/eventos/tallerMobile.jpg", is_banner: false },
+    { id: 2, titulo: 'Entrenamiento 39', descripcion: 'Descripción del evento 2', date: '2025-01-31T08:00:00', img: "/img/reales/eventos/30-31.jpg", imgMobile: "/img/reales/eventos/30-31Mobile.jpg", is_banner: false },
+    { id: 3, titulo: 'Premios Entrenando Latinos 2024', descripcion: 'Descripción del evento 3', date: '2025-02-01T18:00:00', img: "/img/reales/eventos/premiosweb.webp", imgMobile: "/img/reales/eventos/premios-mobile.webp", is_banner: false },
 ]);
 function scrolltop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -114,7 +114,7 @@ const toggleMenu = () => {
     opacity: 0;
     overflow: hidden;
     /* transition: linear all .3s; */
-    transition: linear all 1s;
+    transition: ease all 1s;
     opacity: 0;
     pointer-events: auto;
 
@@ -122,18 +122,19 @@ const toggleMenu = () => {
 
 .eventos-slider.expandido {
     height: 100%;
-    transition: linear all 1s;
+    transition: ease all 1s;
     /* transition: linear all .3s; */
-    width: 50vw;
+    width: 900px;
     opacity: 1;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
     .eventos-slider.expandido {
-        width: 60vw;
+        width: 100vw;
     }
 }
 
+/*
 @media screen and (max-width: 991px) {
     .eventos-slider.expandido {
         width: 70vw;
@@ -145,7 +146,7 @@ const toggleMenu = () => {
     .eventos-slider.expandido {
         width: 100vw;
     }
-}
+} */
 
 .close-button {
     padding: 5px;
@@ -164,6 +165,7 @@ const toggleMenu = () => {
 }
 
 .botom-close {
+    padding-top: 5px;
     position: absolute;
     z-index: 1001;
     background-color: transparent;

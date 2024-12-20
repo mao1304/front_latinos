@@ -212,6 +212,19 @@ import whatsappIcon from './icons/whatsappIcon.vue';
   text-align: center;
 }
 
+@media screen and (min-width: 901px) and (max-width: 1120px) {
+  .card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card h3 {
+    font-size: 16px;
+  }
+
+}
+
 .dsd {
   background-color: #fff;
   grid-column: span 2;
@@ -304,7 +317,6 @@ import whatsappIcon from './icons/whatsappIcon.vue';
   position: absolute;
   max-width: 100%;
   height: 110%;
-  /* left: 0px; */
   bottom: 0;
   object-fit: cover;
   overflow: visible;
@@ -318,29 +330,23 @@ import whatsappIcon from './icons/whatsappIcon.vue';
 
 .name-1 {
   writing-mode: vertical-lr;
-  /* Cambia la dirección del texto a vertical */
   text-orientation: upright;
-  /* transform: rotate(90deg); */
   position: relative;
   line-height: 1.5;
-  /* left: -30px; */
 }
 
 .name-2 {
   writing-mode: vertical-lr;
-  /* Cambia la dirección del texto a vertical */
   text-orientation: upright;
   position: relative;
   line-height: 1.5;
-  /* transform: rotate(90deg); */
-  /* right: -70px; */
+
 
 }
 
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr; */
   gap: 16px;
 }
 
@@ -392,27 +398,22 @@ import whatsappIcon from './icons/whatsappIcon.vue';
   writing-mode: vertical-rl;
   transform: rotate(360deg);
   color: rgb(255, 255, 255);
-  /* font-size: 0.875rem; */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: bold;
   font-family: 'Gotham';
-  /* margin-bottom: 1rem; */
 }
 
 .side-text-2 {
   margin: auto;
   text-align: center;
-  /* text-orientation: upright; */
   writing-mode: vertical-rl;
   transform: rotate(360deg);
   color: rgb(255, 255, 255);
-  /* font-size: 0.875rem; */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: bold;
   font-family: 'Bebas Neue';
-  /* margin-bottom: 1rem; */
 }
 
 .zoom-levels span {
@@ -524,24 +525,4 @@ import whatsappIcon from './icons/whatsappIcon.vue';
     order: 9;
   }
 }
-
-
-/* .wide, .phone-showcase {
-      grid-column: span 2;
-    }
-  } */
-
-/* @media (max-width: 640px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .wide, .phone-showcase {
-      grid-column: span 1;
-    }
-  } */
-/* .letra {
-    background-color: #fff;
-    color: #000;
-   } */
 </style>
