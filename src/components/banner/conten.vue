@@ -16,7 +16,7 @@
         </div>
         <div v-else class="countdown-container">
             <h1 class="title">{{ title }}</h1>
-            <div class="countdown">
+            <div v-if="now < new Date(targetDate)" class="countdown">
                 <div class="countdown-item">
                     <span class="number">{{ timeRemaining.days }}</span>
                     <span class="label">Dias</span>
@@ -34,6 +34,20 @@
                     <span class="label">Segundos</span>
                 </div>
             </div>
+            <div v-else-if="now < new Date(finalDate)">
+                <p>🔴En progreso</p>
+                <p style="line-height: 1; font-size: 20px; margin-top:11px; font-weight: bold; line-height: 25px;">
+                    "¿No alcanzaste esta fecha?<br> <span class="highlight">contáctanos</span> y prepárate para el
+                    <span class="highlight">próximo Evento.</span>"
+                </p>
+            </div>
+            <div v-else>
+                <p>⚫Terminado</p>
+                <p style="line-height: 1; font-size: 20px; margin-top:11px; font-weight: bold; line-height: 25px;">
+                    "¿No alcanzaste esta fecha?<br> <span class="highlight">contáctanos</span> y prepárate para el
+                    <span class="highlight">próximo Evento.</span>"
+                </p>
+            </div>
         </div>
     </div>
 </template>
@@ -44,6 +58,7 @@ import { ref, onMounted } from 'vue';
 import isMobile from '../../stores/isMobile.js';
 const props = defineProps<{
     targetDate: string;
+    finalDate: string;
     title: string;
     isBanner: boolean;
     img: string;
@@ -54,6 +69,7 @@ const { timeRemaining, calculateTimeRemaining } = useCountdown(props.targetDate)
 const title = ref(props.title);
 const img = ref(props.img);
 const imgMobile = ref(props.imgMobile);
+const now = ref(new Date());
 
 onMounted(() => {
     if (isMobile()) {

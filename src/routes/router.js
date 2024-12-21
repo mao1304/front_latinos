@@ -22,9 +22,27 @@ const routes = [
         meta: { title: "Nuestros Blog's" },
     },
     {
-        path: '/blog-details/:slug',
-        name: 'blogDetails',
-        component: () => import('../views/blogDetails.vue'),
+        path: '/blog-details/blog-1',
+        name: 'blog-1',
+        component: () => import('../views/blog1.vue'),
+        meta: { title: ' Cuando la Determinación Supera los Obstáculos' },
+    },
+    {
+        path: '/blog-details/blog-2',
+        name: 'blog-2',
+        component: () => import('../views/blog2.vue'),
+        meta: { title: '{{ post.title }}' },
+    },
+    {
+        path: '/blog-details/blog-3',
+        name: 'blog-3',
+        component: () => import('../views/blog3.vue'),
+        meta: { title: '{{ post.title }}' },
+    },
+    {
+        path: '/blog-details/blog-4',
+        name: 'blog-4',
+        component: () => import('../views/blog4.vue'),
         meta: { title: '{{ post.title }}' },
     },
     {
@@ -61,7 +79,7 @@ const routes = [
         path: '/testimonios',
         name: 'testimonios',
         component: () => import('../views/testimonials.vue'),
-        meta: { title: 'palabras de nuestros clientes' },
+        meta: { title: 'Historias de vida' },
     },
     {
         path: '/:catchAll(.*)',

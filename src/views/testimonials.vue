@@ -159,6 +159,22 @@ function selectVideo(index) {
     border: 2px solid transparent;
 }
 
+@media screen and (max-width: 767px) {
+    .video-thumbnail {
+        aspect-ratio: 16/9;
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+    .video-thumbnail {
+        aspect-ratio: 16/9;
+        width: calc(100% - 20px);
+
+    }
+}
+
 .video-thumbnail.active {
     border-color: #d69d15;
     background: #fff8e8;

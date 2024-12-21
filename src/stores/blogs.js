@@ -8,6 +8,7 @@ const blog = [
         author: 'Luis Velazquez',
         date: '19 de octubre, 2023',
         short_date: '19/10/2023',
+        link: '/blog-details/blog-1'
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const blog = [
         author: 'Luis Velazquez',
         date: '19 de octubre, 2023',
         short_date: '19/10/2023',
+        link: '/blog-details/blog-2'
     },
     {
         id: 3,
@@ -28,6 +30,7 @@ const blog = [
         author: 'Luis Velazquez',
         date: '19 de octubre, 2023',
         short_date: '19/10/2023',
+        link: '/blog-details/blog-3'
     },
     {
         id: 4,
@@ -38,8 +41,8 @@ const blog = [
         author: 'Luis Velazquez',
         date: '19 de octubre, 2023',
         short_date: '19/10/2023',
+        link: '/blog-details/blog-4'
     }
 
 ]
-
 export default blog

@@ -23,10 +23,6 @@
                                                 :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
                                     </ul>
                                 </li>
-                                <li :class="{ active: $route.path === '/catalogo' }">
-                                    <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
-                                        target="_blank"><span>Catalogo</span></a>
-                                </li>
                                 <li :class="{ active: $route.path === '/nosotros' || $route.path === '/contacto' }"
                                     class="menu-item-has-children ">
                                     <router-link to="/nosotros"><span>Nosotros</span></router-link>
@@ -47,6 +43,10 @@
                                         <li :class="{ active: $route.path === '/blog' }"> <router-link
                                                 to="/blog"><span>Blog</span></router-link></li>
                                     </ul>
+                                </li>
+                                <li :class="{ active: $route.path === '/catalogo' }">
+                                    <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
+                                        target="_blank"><span>Catalogo</span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -72,13 +72,9 @@
                                                                 }}</span></router-link></li>
                                                 </ul>
                                             </li>
-                                            <li :class="{ active: $route.path === '/catalogo' }">
-                                                <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
-                                                    target="_blank"><span>Catalogo</span></a>
-                                            </li>
                                             <li :class="{ active: $route.path.startsWith('/nosotros') || $route.path.startsWith('/contacto') }"
                                                 class="menu-item menu-item-has-children ">
-                                                <router-link to=""><span>nosotros</span></router-link>
+                                                <router-link to="/nosotros"><span>Nosotros</span></router-link>
                                                 <ul class="sub-menu">
                                                     <li :class="{ active: $route.path === '/contacto' }">
                                                         <router-link to="/contacto"><span>Contacto</span></router-link>
@@ -97,6 +93,10 @@
                                                         <router-link to="/blog"><span>Blog</span></router-link>
                                                     </li>
                                                 </ul>
+                                            </li>
+                                            <li :class="{ active: $route.path === '/catalogo' }">
+                                                <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
+                                                    target="_blank"><span>Catalogo</span></a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -146,13 +146,9 @@
                                         :to="servicio.link"><span>{{ servicio.title }}</span></router-link></li>
                             </ul>
                         </li>
-                        <li :class="{ active: $route.path === '/catalogo' }">
-                            <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
-                                target="_blank"><span>Catalogo</span></a>
-                        </li>
                         <li :class="{ active: $route.path.startsWith('/nosotros') || $route.path.startsWith('/contacto') }"
                             class="menu-item menu-item-has-children ">
-                            <router-link to="/nosotros"><span>nosotros</span></router-link>
+                            <router-link to="/nosotros"><span>Nosotros</span></router-link>
                             <ul class="sub">
                                 <li :class="{ active: $route.path === '/contacto' }">
                                     <router-link href="/contacto"><span>Contacto</span></router-link>
@@ -172,14 +168,17 @@
                                 </li>
                             </ul>
                         </li>
-
+                        <li :class="{ active: $route.path === '/catalogo' }">
+                            <a href="https://links.entrenandolatinosinroofing.com/catalogo/"
+                                target="_blank"><span>Catálogo</span></a>
+                        </li>
 
                     </ul>
                 </nav>
             </div>
             <div class="col-xl-4 col-md-5 right-area">
                 <ul>
-                    <li><span class="title">Póngase en contacto con nosotros en</span></li>
+                    <li><span class="title">Ponte en contacto con nosotros en</span></li>
                     <li v-for="contactDetail in contactDetails"><a :href="contactDetail.link" target="_blank">{{
                         contactDetail.value }}</a></li>
                 </ul>

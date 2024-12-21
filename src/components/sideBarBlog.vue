@@ -13,20 +13,15 @@ const handleSearch = () => {
 
 <template>
     <div class="col-lg-4 mt-30">
-    <div class="blog-sidebar sidebar-area mt-none-40" style="position: sticky; top: 20px; bottom: 20px;">
-        <div class="widget mt-40">
-            <h2 class="widget__title">Buscar</h2>
-            <form class="widget__search" @submit.prevent="handleSearch">
-                    <input 
-                        type="text" 
-                        v-model="searchQuery"
-                        placeholder="Buscar..."
-                        @input="handleSearch"
-                    >
+        <div class="blog-sidebar sidebar-area mt-none-40" style="position: sticky; top: 20px; bottom: 20px;">
+            <div class="widget mt-40">
+                <h2 class="widget__title">Buscar</h2>
+                <form class="widget__search" @submit.prevent="handleSearch">
+                    <input type="text" v-model="searchQuery" placeholder="Buscar..." @input="handleSearch">
                     <button type="submit"><i class="far fa-search"></i></button>
                 </form>
-        </div>
-        <!-- <div class="widget mt-40">
+            </div>
+            <!-- <div class="widget mt-40">
             <h2 class="widget__title">
                 <span>Categoría</span>
             </h2>
@@ -41,26 +36,29 @@ const handleSearch = () => {
                 <li><a href="#!">Web Development <span>(03)</span></a></li> 
             </ul>
         </div> -->
-        <div class="widget mt-40">
-            <h2 class="widget__title">Publicaciones recientes</h2>
-            <div class="widget__post">
-                <div v-for="post in blog" class="widget__post-item ul_li">
-                    <div class="post-thumb">
-                        <a href="blog-single.html"><img v-bind:src="post.img" alt=""></a>
-                    </div>
-                    <div class="post-content">
-                        <div class="post-meta">
-                            <a href="#!"><i class="invite-text-gr-color far fa-user"></i>{{ post.author }}</a>
-                            <a href="#!"><i class="invite-text-gr-color far fa-calendar"></i>{{ post.short_date }}</a>
+            <div class="widget mt-40">
+                <h2 class="widget__title">Publicaciones recientes</h2>
+                <div class="widget__post">
+                    <div v-for="post in blog" class="widget__post-item ul_li">
+                        <div class="post-thumb">
+                            <RouterLink :to="post.link"><img v-bind:src="post.img" alt=""></RouterLink>
                         </div>
-                        <h4 class="post-title border-effect-2"><a href="blog-single.html">{{ post.title }}</a></h4>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <a href="#!"><i class="invite-text-gr-color far fa-user"></i>{{ post.author }}</a>
+                                <a href="#!"><i class="invite-text-gr-color far fa-calendar"></i>{{ post.short_date
+                                    }}</a>
+                            </div>
+                            <h4 class="post-title border-effect-2">
+                                <RouterLink :to="post.link">{{ post.title }}</RouterLink>
+                            </h4>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        
-        <!-- <div class="widget mt-40">
+
+            <!-- <div class="widget mt-40">
             <h2 class="widget__title">
                 <span>Tags</span>
             </h2>
@@ -75,8 +73,8 @@ const handleSearch = () => {
                 <a href="#!">Planning</a>
             </div>
         </div> -->
+        </div>
     </div>
-</div>
 </template>
 
 <script>

@@ -29,29 +29,35 @@ import BannerSections from '../components/banner-sections.vue';
                     <div class="blog-post-wrapper">
                         <article class="post-details">
                             <div class="post-thumb">
-                                <img src="/img/blog/post_02.jpg" alt="">
+                                <img src="/img/reales/FOTOGRAFIAS/blog-1.jpg" alt="">
                             </div>
-                            <ul class="post-meta ul_li">
+                            <!-- <ul class="post-meta ul_li">
                                 <li><span><i class="far fa-user"></i><span class="author vcard">Admin</span></span></li>
                                 <li><a href="#!"><i class="far fa-comments"></i> Comments (3)</a></li>
                                 <li><span class="posted-on"><i class="far fa-clock"></i> <a href="#!">August 4,
                                             2023</a></span></li>
-                            </ul>
-                            <h2>Power of Digital Product Design for Series A Funding</h2>
-                            <p>Financial growth and wealth accumulation are common goals for individuals and businesses
-                                alike. However, navigating the complex world of finance, investments, and money
-                                management can be challenging. This is where a financial consultant can make a
-                                significant difference. Let's explore. </p>
-                            <p>One of the key ways to grow wealth is through investments. Financial consultants are
-                                experts in various investment opportunities, from stocks and bonds to real estate and
-                                alternative investments. They can guide you in making informed investment decisions
-                                based on your financial objectives.</p>
-                            <blockquote>
+                            </ul> -->
+                            <p>En el competitivo mundo de la industria del roofing en Estados Unidos, a menudo
+                                encontramos historias inspiradoras de individuos que superan obstáculos y alcanzan el
+                                éxito. Esta es la crónica de un hombre que comenzó su carrera como lavaplatos en la
+                                industria de restaurantes y que, a lo largo de los años, logró ascender a una posición
+                                destacada como vendedor en Dynamic Restoration, con un impresionante salario anual de
+                                más de $300,000 dólares. Exploraremos su asombrosa transformación y las lecciones que
+                                todos podemos aprender de su viaje hacia el éxito en el mundo del roofing.</p>
+                            <h2>Desde el Fregadero a la Cima</h2>
+                            <p>Nuestro protagonista inició su recorrido laboral en Estados Unidos como lavaplatos en
+                                restaurantes locales. Con el tiempo, su dedicación y determinación le permitieron
+                                ascender hasta convertirse en gerente de un restaurante, acumulando 15 años de
+                                experiencia en la industria. Sin embargo, su ambición y deseo de alcanzar metas aún más
+                                elevadas lo llevaron a buscar nuevos horizontes. Su salario anual, que rondaba los
+                                $65,000 dólares, ya no era suficiente para satisfacer sus sueños de grandeza.</p>
+                            <h2>El Audaz Salto a la Industria del roofing</h2>
+                            <!-- <blockquote>
                                 <p>"Creativity is allowing yourself to make mistakes. You only have to do a few things
                                     right in your life so long as you don’t do too many things."</p>
                                 <span>Cameron Williamson</span>
                                 <div class="quote"><img src="/img/icon/b-quote.png" alt=""></div>
-                            </blockquote>
+                            </blockquote> -->
                             <p>The phrase "with confidence" signifies that seeking expert guidance can provide you with
                                 a sense of assurance and self-assuredness throughout the application journey. It
                                 highlights that you're not alone in facing the challenges of the application process.It

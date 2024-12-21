@@ -38,7 +38,7 @@ onMounted(() => {
         <div class="section-title section-title--dm mb-55">
           <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">SERVICIOS</span>
           <div class="clearfix"></div>
-          <h3 class="title wow skewIn">Su éxito con nuestra <br /> <span>experiencia inigualable</span></h3>
+          <h3 class="title wow skewIn">Tu éxito con nuestra <br /> <span>experiencia inigualable</span></h3>
         </div>
       </div>
       <div class="services-inner pos-rel">

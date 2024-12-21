@@ -32,7 +32,7 @@ onMounted(() => {
 
 <template>
     <div class="map">
-        <div id="map" style="height:600px;"></div>
+        <div id="map"></div>
     </div>
 </template>
 
@@ -48,6 +48,12 @@ export default {
 }
 
 #map {
-    /* filter: grayscale(100%); */
+    height: 600px;
+}
+
+@media (max-width: 991px) {
+    #map {
+        height: 400px;
+    }
 }
 </style>

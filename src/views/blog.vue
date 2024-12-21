@@ -58,7 +58,7 @@ const prevPage = () => {
 </script>
 
 <template>
-    <di>
+    <div>
         <banner-sections />
         <!-- blog start -->
         <section class="blog pt-110 pb-130">
@@ -71,7 +71,7 @@ const prevPage = () => {
                             <template v-if="paginatedPosts.length > 0">
                                 <article v-for="post in paginatedPosts" :key="post.slug" class="single-post-item">
                                     <div class="post-thumbnail-wrapper">
-                                        <a href="blog-single.html"><img :src="post.img" alt=""></a>
+                                        <router-link :to="post.link"><img :src="post.img" alt=""></router-link>
                                     </div>
                                     <div class="post-content-wrapper">
 
@@ -82,15 +82,16 @@ const prevPage = () => {
                                                 post.date }}</a></span></li>
                                         </ul>
                                         <h3 class="post-title border_effect">
-                                            <router-link :to="'/blog-details/' + post.slug">{{ post.title
+                                            <router-link :to="post.link">{{ post.title
                                                 }}</router-link>
                                         </h3>
                                         <div class="post-excerpt">
                                             <p style="font-size: 18px;">{{ post.description }}</p>
                                         </div>
                                         <div class="post-read-more">
-                                            <a href="#!" class="btn-link ul_li">Continuar Leyendo <span><img
-                                                        src="/img/icon/arrow-right2.svg" alt=""></span></a>
+                                            <router-link :to="post.link" class="btn-link ul_li">Continuar Leyendo
+                                                <span><img src="/img/icon/arrow-right2.svg" alt=""></span></router-link>
+                                            <!-- <a href="#!" class="btn-link ul_li"></a> -->
                                         </div>
                                     </div>
                                 </article>
@@ -123,8 +124,8 @@ const prevPage = () => {
                 </div>
             </div>
         </section>
-    </di>
-    <brands />
+        <brands />
+    </div>
 </template>
 
 <style scoped>

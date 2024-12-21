@@ -7,7 +7,7 @@ import isMobile from '../stores/isMobile.js';
 import { onMounted, ref } from 'vue';
 
 const now = ref(new Date());
-const targetDate = new Date('2025-01-16T10:25:00');
+const targetDate = new Date('2025-01-30T08:00:00');
 
 // Actualiza la fecha actual cada segundo
 setInterval(() => {

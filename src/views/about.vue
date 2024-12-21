@@ -4,6 +4,7 @@ import BannerSections from '../components/banner-sections.vue';
 import aboutSection from '@/components/aboutSection.vue';
 import Objetives from '@/components/objetives.vue';
 import bento from '@/components/bento.vue';
+import brands from '@/components/brands.vue';
 // import test from '@/components/test.vue';
 </script>
 
@@ -14,6 +15,7 @@ import bento from '@/components/bento.vue';
         <aboutSection />
         <Objetives />
         <team />
+        <brands />
         <!-- <test /> -->
     </div>
 </template>

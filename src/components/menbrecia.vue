@@ -40,9 +40,12 @@ import whatsappIcon from './icons/whatsappIcon.vue'
 
                                     <div class="ds-pricing-info"
                                         style="display: flex; justify-content: space-evenly; padding: 10px; flex-wrap: wrap;">
-                                        <a class="xb-item--btn" style="margin-bottom: 10px;" href="#!">+15023204804</a>
-                                        <a class="xb-item--btn" style="margin-bottom: 10px;" href="#!">+15026927019</a>
-                                        <a class="xb-item--btn" style="margin-bottom: 10px;" href="#!">+15026002652</a>
+                                        <a class="xb-item--btn" style="margin-bottom: 10px;"
+                                            href="tel:+15023204804">+15023204804</a>
+                                        <a class="xb-item--btn" style="margin-bottom: 10px;"
+                                            href="tel:+15026927019">+15026927019</a>
+                                        <a class="xb-item--btn" style="margin-bottom: 10px;"
+                                            href="tel:+15026002652">+15026002652</a>
                                     </div>
 
 

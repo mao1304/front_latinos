@@ -5,7 +5,7 @@
             <div class="section-title section-title--dm mb-30">
                 <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">Testimonios</span>
                 <div class="ul_li_between align-items-end">
-                    <h3 class="title wow skewIn mb-20">Las historias de vida <br> <span> de nuestros clientes</span>
+                    <h3 class="title wow skewIn mb-20">Historias de vida <br> <span> de nuestros clientes</span>
                     </h3>
                     <RouterLink to="/testimonios" class="d-block dm-port-link mb-20">Ver historias <svg width="19"
                             height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
