@@ -28,7 +28,4 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-public
-fonts
-img
 *.mp4
